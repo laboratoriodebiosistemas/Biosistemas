@@ -3,69 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Laboratorio de modelación y automatización de biosistemas</title>
-    <style id="theme-vars">
-:root {
-  --biosys-color-primary-50: #f2f6f3;
-  --biosys-color-primary-100: #dde8e0;
-  --biosys-color-primary-200: #bfd1c5;
-  --biosys-color-primary-300: #9bb5a4;
-  --biosys-color-primary-400: #6c917d;
-  --biosys-color-primary-500: #2e5e4e;
-  --biosys-color-primary-600: #284f42;
-  --biosys-color-primary-700: #223f35;
-  --biosys-color-primary-800: #1a3028;
-  --biosys-color-primary-900: #12211c;
-  --biosys-color-bg: #f7f4ee;
-  --biosys-color-surface: #fffdf9;
-  --biosys-color-surface-muted: #f0ece4;
-  --biosys-color-border: rgba(46, 94, 78, 0.14);
-  --biosys-color-text: #20312b;
-  --biosys-color-text-soft: #586b64;
-  --biosys-color-highlight: #d8c7ad;
-  --state-success: #2f7d59;
-  --state-warning: #b57f2c;
-  --state-error: #b74848;
-  --state-info: #3f6d7a;
-  --biosys-shadow-soft: 0 20px 40px rgba(20, 39, 33, 0.05);
-  --biosys-shadow-float: 0 28px 60px rgba(15, 28, 24, 0.12);
-  --biosys-radius-sm: 4px;
-  --biosys-radius-md: 8px;
-  --biosys-radius-lg: 16px;
-  --biosys-radius-full: 9999px;
-  --biosys-font-title: "Manrope", "Inter", "Segoe UI", sans-serif;
-  --biosys-font-body: "Inter", "Segoe UI", sans-serif;
-}
-
-.dark {
-  --biosys-color-bg: #111917;
-  --biosys-color-surface: #17211e;
-  --biosys-color-surface-muted: #1d2a26;
-  --biosys-color-border: rgba(221, 232, 224, 0.12);
-  --biosys-color-text: #eef3f0;
-  --biosys-color-text-soft: #b2c0ba;
-  --biosys-color-highlight: #9bb5a4;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--biosys-color-bg);
-  color: var(--biosys-color-text);
-  font-family: var(--biosys-font-body);
-}
-
-.biosys-font-title {
-  font-family: var(--biosys-font-title);
-}
-
-.biosys-font-body {
-  font-family: var(--biosys-font-body);
-}
-
-    </style>
+    <title>Contacto | Laboratorio de Modelación y Automatización de Biosistemas</title>
+    <link rel="stylesheet" href="./styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
     <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
     <style type="text/tailwindcss">
@@ -92,47 +31,31 @@ body {
     th { @apply whitespace-nowrap; }
   }
     </style>
-    <style>
-      .no-scrollbar::-webkit-scrollbar { display: none; }
-      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-      [data-icon] {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        -webkit-mask-size: contain;
-        mask-size: contain;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-position: center;
-        mask-position: center;
-        background-color: currentColor;
-      }
-    </style>
 </head>
 <body class="font-body text-biosys-text antialiased">
   <header class="fixed inset-x-0 top-0 z-50 border-b border-biosys-border/80 bg-[rgba(247,244,238,0.9)] backdrop-blur-md">
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
-      <a href="#inicio" class="focus-ring inline-flex min-w-0 items-center gap-4 sm:gap-6">
+      <a href="./inicio.html" class="focus-ring inline-flex min-w-0 items-center gap-4 sm:gap-6">
         <span class="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface p-2 sm:h-28 sm:w-28">
           <img
             src="./assets/WhatsApp_Image_2026-07-07_at_1.52.16_PM_3_.jpeg"
-            alt="Logo del Laboratorio de modelación y automatización de biosistemas"
+            alt="Logo del Laboratorio de Modelación y Automatización de Biosistemas"
             class="h-full w-full object-contain"
           />
         </span>
         <span class="flex min-w-0 flex-col">
           <span class="font-title text-sm font-extrabold uppercase tracking-[0.18em] text-biosys-primary sm:text-lg">LMAB</span>
-          <span class="font-title text-sm font-semibold leading-tight text-biosys-text sm:text-2xl">Laboratorio de modelación y automatización de biosistemas</span>
+          <span class="font-title text-sm font-semibold leading-tight text-biosys-text sm:text-2xl">Laboratorio de Modelación y Automatización de Biosistemas</span>
         </span>
       </a>
       <nav aria-label="Navegación principal" class="hidden items-center gap-6 text-sm font-medium text-biosys-soft md:flex">
-        <a class="nav-link active focus-ring" href="#inicio">Inicio</a>
-        <a class="nav-link focus-ring" href="#investigacion">Investigación</a>
-        <a class="nav-link focus-ring" href="#proyectos">Proyectos</a>
-        <a class="nav-link focus-ring" href="#contacto">Contacto</a>
+        <a class="nav-link focus-ring" href="./inicio.html">Inicio</a>
+        <a class="nav-link focus-ring" href="./investigacion.html">Investigación</a>
+        <a class="nav-link focus-ring" href="./proyectos.html">Proyectos</a>
+        <a class="nav-link active focus-ring" href="./contacto.html">Contacto</a>
       </nav>
       <a
-        href="#contacto"
+        href="./contacto.html"
         class="button-motion focus-ring hidden rounded-full bg-biosys-primary px-5 py-3 text-sm font-semibold text-[var(--biosys-color-surface)] md:inline-flex"
       >
         Colaborar
@@ -140,293 +63,53 @@ body {
     </div>
   </header>
 
-  <main id="inicio" class="overflow-hidden pt-28 sm:pt-32">
-    <section class="section-shell hero-grid relative px-4 pb-14 pt-6 sm:px-6 md:pb-20 lg:px-8 lg:pb-28">
-      <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
-        <div class="relative z-10 max-w-3xl">
-          <span class="eyebrow">Investigación aplicada</span>
-          <div class="mt-6 space-y-6">
-            <p class="font-title text-4xl font-extrabold leading-none tracking-[-0.04em] text-biosys-text balance sm:text-5xl lg:text-6xl">
-              BIOSISTEMAS EN ACCION
-            </p>
-            <p class="max-w-2xl text-base leading-7 text-biosys-soft pretty sm:text-lg sm:leading-8">
-              Integramos automatización, sensado y análisis inteligente para estudiar sistemas biológicos con una mirada contemporánea, sostenible y cercana a los retos del territorio.
-            </p>
-          </div>
-
+  <main class="overflow-hidden pt-28 sm:pt-32">
+    <section class="section-shell hero-grid relative px-4 pb-14 pt-6 sm:px-6 md:pb-20 lg:px-8 lg:pb-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:gap-16">
+        <div class="max-w-3xl">
+          <span class="eyebrow">Contacto y vinculación</span>
+          <h1 class="balance mt-6 font-title text-4xl font-extrabold leading-none tracking-[-0.04em] text-biosys-text sm:text-5xl lg:text-6xl">
+            Conversemos
+          </h1>
+          <p class="mt-6 max-w-2xl text-base leading-7 text-biosys-soft sm:text-lg sm:leading-8">
+            Si buscas colaborar, desarrollar un piloto, abrir una estancia o conocer mejor nuestras capacidades, este es el punto de partida.
+          </p>
           <div class="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
             <a
-              href="#investigacion"
+              href="./proyectos.html"
               class="button-motion cta-link focus-ring inline-flex min-h-[44px] items-center gap-2 rounded-full bg-biosys-primary px-6 py-3 text-sm font-semibold text-[var(--biosys-color-surface)]"
             >
-              Explorar líneas
+              Ver proyectos
               <span class="cta-arrow" aria-hidden="true">→</span>
             </a>
             <a
-              href="#contacto"
+              href="./investigacion.html"
               class="button-motion focus-ring inline-flex min-h-[44px] items-center rounded-full border border-biosys-border bg-biosys-surface px-6 py-3 text-sm font-semibold text-biosys-text"
             >
-              Escribir al laboratorio
+              Ver investigación
             </a>
           </div>
-
-          <div class="mt-10 grid gap-4 sm:grid-cols-3">
-            <div class="panel p-4">
-              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Visión</p>
-              <p class="mt-2 text-sm leading-6 text-biosys-soft">Captura, interpretación y seguimiento de variables biológicas en tiempo real.</p>
-            </div>
-            <div class="panel p-4">
-              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Automatización</p>
-              <p class="mt-2 text-sm leading-6 text-biosys-soft">Sistemas instrumentados para operar, medir y decidir con rigor experimental.</p>
-            </div>
-            <div class="panel p-4">
-              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Transferencia</p>
-              <p class="mt-2 text-sm leading-6 text-biosys-soft">Proyectos conectados con formación, colaboración académica y aplicación práctica.</p>
-            </div>
-          </div>
         </div>
 
-        <div class="relative z-10">
-          <div class="hero-media panel image-lift relative overflow-hidden rounded-[16px] border border-biosys-border shadow-hero focus-within:translate-y-[-2px]">
-            <img
-              src="./assets/WhatsApp_Image_2026-07-07_at_1.52.16_PM_1_.jpeg"
-              alt="Laboratorio de biosistemas con sensores, automatización e investigación agrícola controlada"
-              class="h-[420px] w-full object-cover object-center sm:h-[500px] lg:h-[640px]"
-            />
-            <div class="absolute inset-x-4 bottom-4 rounded-2xl border border-white/40 bg-[rgba(20,49,43,0.78)] p-5 text-white sm:inset-x-6 sm:bottom-6">
-              <p class="text-xs font-semibold uppercase tracking-[0.14em] text-white/70">Enfoque del laboratorio</p>
-              <div class="mt-3 grid gap-3 sm:grid-cols-2">
-                <div>
-                  <p class="font-title text-lg font-bold">Agricultura inteligente</p>
-                  <p class="mt-1 text-sm leading-6 text-white/80">Datos, automatización y lectura ambiental para sistemas de cultivo más precisos.</p>
-                </div>
-                <div>
-                  <p class="font-title text-lg font-bold">Monitoreo sostenible</p>
-                  <p class="mt-1 text-sm leading-6 text-white/80">Soluciones reproducibles para observación, control y toma de decisiones.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="px-4 py-6 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl">
-        <div class="panel-muted grid gap-4 p-4 sm:grid-cols-2 sm:p-6 lg:grid-cols-4">
+        <div class="panel-muted grid gap-4 p-6 sm:grid-cols-3 lg:grid-cols-1">
           <div class="rounded-2xl border border-biosys-border/80 bg-biosys-surface p-5">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Capacidad 01</p>
-            <p class="mt-3 font-title text-xl font-bold text-biosys-text">Visión computacional</p>
-            <p class="mt-2 text-sm leading-6 text-biosys-soft">Lectura de imágenes, fenotipado y análisis visual para investigación de precisión.</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Consultas</p>
+            <p class="mt-3 text-sm leading-7 text-biosys-soft">Información sobre líneas de investigación, capacidades del laboratorio y posibilidades de colaboración.</p>
           </div>
           <div class="rounded-2xl border border-biosys-border/80 bg-biosys-surface p-5">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Capacidad 02</p>
-            <p class="mt-3 font-title text-xl font-bold text-biosys-text">Robótica agrícola</p>
-            <p class="mt-2 text-sm leading-6 text-biosys-soft">Plataformas experimentales para automatizar tareas y validar prototipos en campo o invernadero.</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Vinculación</p>
+            <p class="mt-3 text-sm leading-7 text-biosys-soft">Proyectos conjuntos, pilotos en entorno controlado, transferencia metodológica y trabajo interdisciplinario.</p>
           </div>
           <div class="rounded-2xl border border-biosys-border/80 bg-biosys-surface p-5">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Capacidad 03</p>
-            <p class="mt-3 font-title text-xl font-bold text-biosys-text">Monitoreo inteligente</p>
-            <p class="mt-2 text-sm leading-6 text-biosys-soft">Sensores, telemetría y tableros de observación para variables ambientales y productivas.</p>
-          </div>
-          <div class="rounded-2xl border border-biosys-border/80 bg-biosys-surface p-5">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Capacidad 04</p>
-            <p class="mt-3 font-title text-xl font-bold text-biosys-text">Integración de datos</p>
-            <p class="mt-2 text-sm leading-6 text-biosys-soft">Cruce de señales biológicas y ambientales para interpretar sistemas complejos con claridad.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="investigacion" class="section-shell px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
-      <div class="mx-auto max-w-7xl">
-        <div class="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
-          <div class="max-w-xl">
-            <span class="eyebrow">Líneas de trabajo</span>
-            <h2 class="balance mt-6 font-title text-3xl font-extrabold tracking-[-0.03em] text-biosys-text sm:text-4xl">
-              Investigación
-            </h2>
-            <p class="mt-5 text-base leading-7 text-biosys-soft sm:text-lg sm:leading-8">
-              El laboratorio articula investigación aplicada, infraestructura experimental y colaboración interdisciplinaria para transformar datos biológicos en decisiones útiles.
-            </p>
-          </div>
-
-          <div class="grid gap-5 md:grid-cols-2">
-            <article class="card-lift panel focus-ring p-6">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="font-title text-xl font-bold text-biosys-text">Sensado ambiental</h3>
-                <span class="chip-motion rounded-full bg-biosys-primaryTint px-3 py-1 text-xs font-semibold text-biosys-primary">Microclima</span>
-              </div>
-              <p class="mt-4 text-sm leading-7 text-biosys-soft">
-                Diseño e integración de redes de medición para observar condiciones críticas en cultivo, laboratorio e infraestructura agrícola.
-              </p>
-            </article>
-            <article class="card-lift panel focus-ring p-6">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="font-title text-xl font-bold text-biosys-text">Automatización experimental</h3>
-                <span class="chip-motion rounded-full bg-biosys-primaryTint px-3 py-1 text-xs font-semibold text-biosys-primary">Control</span>
-              </div>
-              <p class="mt-4 text-sm leading-7 text-biosys-soft">
-                Instrumentación de procesos, validación de rutinas y desarrollo de sistemas para ensayos repetibles y confiables.
-              </p>
-            </article>
-            <article class="card-lift panel focus-ring p-6">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="font-title text-xl font-bold text-biosys-text">Fenotipado digital</h3>
-                <span class="chip-motion rounded-full bg-biosys-primaryTint px-3 py-1 text-xs font-semibold text-biosys-primary">Imágenes</span>
-              </div>
-              <p class="mt-4 text-sm leading-7 text-biosys-soft">
-                Procesamiento visual para estudiar crecimiento, respuesta fisiológica y estado de sistemas vegetales con lectura no invasiva.
-              </p>
-            </article>
-            <article class="card-lift panel focus-ring p-6">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="font-title text-xl font-bold text-biosys-text">Sostenibilidad operativa</h3>
-                <span class="chip-motion rounded-full bg-biosys-primaryTint px-3 py-1 text-xs font-semibold text-biosys-primary">Impacto</span>
-              </div>
-              <p class="mt-4 text-sm leading-7 text-biosys-soft">
-                Evaluación de estrategias para optimizar recursos, mejorar trazabilidad y fortalecer la toma de decisiones basada en evidencia.
-              </p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="px-4 py-2 sm:px-6 lg:px-8">
-      <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:gap-16">
-        <div class="panel image-lift overflow-hidden rounded-[16px] border border-biosys-border">
-          <img
-            src="./assets/WhatsApp_Image_2026-07-07_at_1.52.16_PM_2_.jpeg"
-            alt="Investigación en biosistemas con monitoreo vegetal, robótica y análisis en invernadero o campo"
-            class="h-full min-h-[320px] w-full object-cover object-center"
-          />
-        </div>
-        <div class="flex items-center">
-          <div class="max-w-2xl">
-            <span class="eyebrow">Automatización sostenible</span>
-            <h2 class="balance mt-6 font-title text-3xl font-extrabold tracking-[-0.03em] text-biosys-text sm:text-4xl">
-              Biosistemas medibles
-            </h2>
-            <p class="mt-5 text-base leading-7 text-biosys-soft sm:text-lg sm:leading-8">
-              Entendemos la automatización como una herramienta para observar mejor, intervenir con criterio y generar conocimiento útil para sistemas biológicos complejos.
-            </p>
-            <div class="mt-8 grid gap-4 sm:grid-cols-2">
-              <div class="rounded-2xl border border-biosys-border bg-biosys-surface p-5">
-                <p class="font-title text-lg font-bold text-biosys-text">Sensado continuo</p>
-                <p class="mt-2 text-sm leading-6 text-biosys-soft">Captura de señales relevantes para caracterizar ambiente, crecimiento y desempeño operativo.</p>
-              </div>
-              <div class="rounded-2xl border border-biosys-border bg-biosys-surface p-5">
-                <p class="font-title text-lg font-bold text-biosys-text">Modelos útiles</p>
-                <p class="mt-2 text-sm leading-6 text-biosys-soft">Lectura analítica orientada a interpretación, comparación de escenarios y soporte experimental.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="proyectos" class="section-shell px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
-      <div class="mx-auto max-w-7xl">
-        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div class="max-w-2xl">
-            <span class="eyebrow">Proyectos e impacto</span>
-            <h2 class="balance mt-6 font-title text-3xl font-extrabold tracking-[-0.03em] text-biosys-text sm:text-4xl">
-              Proyectos
-            </h2>
-          </div>
-          <p class="max-w-2xl text-base leading-7 text-biosys-soft">
-            La investigación se materializa en prototipos, pilotos y metodologías que conectan automatización, sostenibilidad y formación avanzada.
-          </p>
-        </div>
-
-        <div class="mt-10 grid gap-5 lg:grid-cols-3">
-          <article class="card-lift panel flex h-full flex-col p-6">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Proyecto 01</p>
-            <h3 class="mt-4 font-title text-2xl font-bold text-biosys-text">Cultivos instrumentados</h3>
-            <p class="mt-4 flex-1 text-sm leading-7 text-biosys-soft">
-              Integración de sensores y rutinas de adquisición para comparar comportamientos de cultivo bajo diferentes condiciones ambientales.
-            </p>
-            <div class="mt-6 flex items-center justify-between text-sm font-medium text-biosys-text">
-              <span>Monitoreo y análisis</span>
-              <span class="cta-arrow" aria-hidden="true">↗</span>
-            </div>
-          </article>
-          <article class="card-lift panel flex h-full flex-col p-6">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Proyecto 02</p>
-            <h3 class="mt-4 font-title text-2xl font-bold text-biosys-text">Robots para ensayo</h3>
-            <p class="mt-4 flex-1 text-sm leading-7 text-biosys-soft">
-              Plataformas de automatización diseñadas para experimentación, validación de tareas y estudio de operaciones repetitivas en entornos agrícolas.
-            </p>
-            <div class="mt-6 flex items-center justify-between text-sm font-medium text-biosys-text">
-              <span>Prototipado y validación</span>
-              <span class="cta-arrow" aria-hidden="true">↗</span>
-            </div>
-          </article>
-          <article class="card-lift panel flex h-full flex-col p-6">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Proyecto 03</p>
-            <h3 class="mt-4 font-title text-2xl font-bold text-biosys-text">Datos para decisión</h3>
-            <p class="mt-4 flex-1 text-sm leading-7 text-biosys-soft">
-              Desarrollo de marcos de observación y lectura que ayudan a interpretar fenómenos biológicos con criterios cuantitativos y contexto operativo.
-            </p>
-            <div class="mt-6 flex items-center justify-between text-sm font-medium text-biosys-text">
-              <span>Modelos y transferencia</span>
-              <span class="cta-arrow" aria-hidden="true">↗</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="px-4 py-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl">
-        <div class="panel-muted grid gap-6 p-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:p-8">
-          <div class="max-w-xl">
-            <span class="eyebrow">Oportunidades</span>
-            <h2 class="balance mt-6 font-title text-3xl font-extrabold tracking-[-0.03em] text-biosys-text sm:text-4xl">
-              Vinculación abierta
-            </h2>
-            <p class="mt-5 text-base leading-7 text-biosys-soft">
-              Abrimos el laboratorio a colaboraciones académicas, estancias, proyectos aplicados y circulación de resultados con una mirada rigurosa y humana.
-            </p>
-            <a
-              href="#contacto"
-              class="button-motion cta-link focus-ring mt-8 inline-flex min-h-[44px] items-center gap-2 rounded-full border border-biosys-border bg-biosys-surface px-5 py-3 text-sm font-semibold text-biosys-text"
-            >
-              Iniciar contacto
-              <span class="cta-arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
-
-          <div class="panel bg-biosys-surface/80 p-2">
-            <div class="impact-item grid gap-4 px-4 py-5 sm:grid-cols-[170px_minmax(0,1fr)] sm:px-5">
-              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Colaboración</p>
-              <div>
-                <h3 class="font-title text-lg font-bold text-biosys-text">Proyectos compartidos</h3>
-                <p class="mt-2 text-sm leading-7 text-biosys-soft">Espacios para co-diseñar pilotos, metodologías y plataformas experimentales con otros equipos e instituciones.</p>
-              </div>
-            </div>
-            <div class="impact-item grid gap-4 px-4 py-5 sm:grid-cols-[170px_minmax(0,1fr)] sm:px-5">
-              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Formación</p>
-              <div>
-                <h3 class="font-title text-lg font-bold text-biosys-text">Estancias y mentoría</h3>
-                <p class="mt-2 text-sm leading-7 text-biosys-soft">Acompañamiento para estudiantes e investigadores interesados en automatización, sensado y análisis de biosistemas.</p>
-              </div>
-            </div>
-            <div class="impact-item grid gap-4 px-4 py-5 sm:grid-cols-[170px_minmax(0,1fr)] sm:px-5">
-              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Publicaciones</p>
-              <div>
-                <h3 class="font-title text-lg font-bold text-biosys-text">Resultados documentados</h3>
-                <p class="mt-2 text-sm leading-7 text-biosys-soft">Comunicación de hallazgos, protocolos y avances con formatos claros para comunidad académica y socios externos.</p>
-              </div>
-            </div>
+            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Trayectoria</p>
+            <p class="mt-3 text-sm leading-7 text-biosys-soft">Un espacio para conectar investigación aplicada, observación precisa y automatización con impacto académico y territorial.</p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer id="contacto" class="px-4 pb-10 pt-16 sm:px-6 sm:pb-12 lg:px-8 lg:pt-24">
+  <footer class="px-4 pb-10 pt-16 sm:px-6 sm:pb-12 lg:px-8 lg:pt-24">
     <div class="mx-auto max-w-7xl">
       <div class="panel overflow-hidden">
         <div class="grid gap-0 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
@@ -455,13 +138,13 @@ body {
             </div>
             <div class="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
               <a
-                href="#inicio"
+                href="./inicio.html"
                 class="button-motion focus-ring inline-flex min-h-[44px] items-center rounded-full bg-biosys-primary px-5 py-3 text-sm font-semibold text-[var(--biosys-color-surface)]"
               >
                 Volver arriba
               </a>
               <a
-                href="#investigacion"
+                href="./investigacion.html"
                 class="button-motion focus-ring inline-flex min-h-[44px] items-center rounded-full border border-biosys-border px-5 py-3 text-sm font-semibold text-biosys-text"
               >
                 Ver investigación
@@ -473,184 +156,5 @@ body {
     </div>
   </footer>
 
-    <style>
-    :root {
-      color-scheme: light;
-    }
-
-    html {
-      scroll-padding-top: 96px;
-    }
-
-    body {
-      background:
-        radial-gradient(circle at top left, rgba(221, 232, 224, 0.65), transparent 28%),
-        linear-gradient(180deg, rgba(255, 253, 249, 0.95), rgba(247, 244, 238, 1));
-    }
-
-    .balance {
-      text-wrap: balance;
-    }
-
-    .pretty {
-      text-wrap: pretty;
-    }
-
-    .section-shell {
-      position: relative;
-      overflow: clip;
-    }
-
-    .section-shell::before {
-      content: "";
-      position: absolute;
-      inset: 0 auto auto 0;
-      width: 180px;
-      height: 180px;
-      background: radial-gradient(circle, rgba(155, 181, 164, 0.18), transparent 70%);
-      pointer-events: none;
-      opacity: 0.8;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      border: 1px solid var(--biosys-color-border);
-      background: rgba(255, 253, 249, 0.8);
-      border-radius: 999px;
-      padding: 0.45rem 0.85rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--biosys-color-primary-600);
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 0.5rem;
-      height: 0.5rem;
-      border-radius: 999px;
-      background: var(--biosys-color-primary-500);
-    }
-
-    .panel {
-      border: 1px solid var(--biosys-color-border);
-      background: rgba(255, 253, 249, 0.9);
-      border-radius: var(--biosys-radius-lg);
-    }
-
-    .panel-muted {
-      border: 1px solid var(--biosys-color-border);
-      background: rgba(240, 236, 228, 0.72);
-      border-radius: var(--biosys-radius-lg);
-    }
-
-    .cta-arrow {
-      transition: transform 140ms cubic-bezier(.2, .8, .2, 1);
-    }
-
-    .cta-link:hover .cta-arrow,
-    .cta-link:focus-visible .cta-arrow,
-    .card-lift:hover .cta-arrow,
-    .card-lift:focus-visible .cta-arrow {
-      transform: translateX(2px);
-    }
-
-    .nav-link,
-    .card-lift,
-    .button-motion,
-    .image-lift,
-    .chip-motion {
-      transition:
-        transform 140ms cubic-bezier(.2, .8, .2, 1),
-        background-color 140ms cubic-bezier(.2, .8, .2, 1),
-        border-color 140ms cubic-bezier(.2, .8, .2, 1),
-        color 140ms cubic-bezier(.2, .8, .2, 1),
-        opacity 140ms cubic-bezier(.2, .8, .2, 1);
-    }
-
-    .button-motion:hover,
-    .button-motion:focus-visible,
-    .card-lift:hover,
-    .card-lift:focus-visible,
-    .image-lift:hover,
-    .image-lift:focus-visible {
-      transform: translateY(-2px);
-    }
-
-    .nav-link {
-      position: relative;
-    }
-
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -0.55rem;
-      width: 100%;
-      height: 1.5px;
-      background: var(--biosys-color-primary-500);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 140ms cubic-bezier(.2, .8, .2, 1);
-    }
-
-    .nav-link:hover::after,
-    .nav-link:focus-visible::after,
-    .nav-link.active::after {
-      transform: scaleX(1);
-    }
-
-    .hero-media::after {
-      content: "";
-      position: absolute;
-      inset: auto -8% -10% auto;
-      width: 46%;
-      height: 38%;
-      border: 1px solid rgba(255, 253, 249, 0.6);
-      background: linear-gradient(180deg, rgba(255, 253, 249, 0.5), rgba(255, 253, 249, 0.18));
-      border-radius: 16px;
-      backdrop-filter: blur(8px);
-      pointer-events: none;
-    }
-
-    .hero-grid::before {
-      content: "";
-      position: absolute;
-      inset: 6% auto auto 42%;
-      width: 22%;
-      height: 22%;
-      border-top: 1px solid rgba(46, 94, 78, 0.15);
-      border-right: 1px solid rgba(46, 94, 78, 0.15);
-      pointer-events: none;
-    }
-
-    .impact-item + .impact-item,
-    .contact-row + .contact-row {
-      border-top: 1px solid var(--biosys-color-border);
-    }
-
-    .focus-ring:focus-visible {
-      outline: 2px solid var(--biosys-color-primary-500);
-      outline-offset: 3px;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-    }
-  </style>
 </body>
 </html>
