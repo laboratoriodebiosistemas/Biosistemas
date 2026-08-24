@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos | Laboratorio de Modelación y Automatización de Biosistemas</title>
+    <title>Proyectos y Producción Académica | Laboratorio de Modelación y Automatización de Biosistemas</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
     <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
@@ -33,10 +33,11 @@
     </style>
 </head>
 <body class="font-body text-biosys-text antialiased">
+  <!-- Header / Barra de Navegación -->
   <header class="fixed inset-x-0 top-0 z-50 border-b border-biosys-border/80 bg-[rgba(247,244,238,0.9)] backdrop-blur-md">
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
       <a href="./inicio.html" class="focus-ring inline-flex min-w-0 items-center gap-4 sm:gap-6">
-        <span class="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface p-2 sm:h-28 sm:w-28">
+        <span class="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface p-2 sm:h-24 sm:w-24">
           <img
             src="./assets/Logo.jpeg"
             alt="Logo del Laboratorio de Modelación y Automatización de Biosistemas"
@@ -64,106 +65,687 @@
   </header>
 
   <main class="overflow-hidden pt-28 sm:pt-32">
-    <section class="section-shell px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+    <!-- Hero / Presentación de Proyectos -->
+    <section class="section-shell px-4 pb-10 pt-10 sm:px-6 sm:pb-14 lg:px-8">
       <div class="mx-auto max-w-7xl">
         <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div class="max-w-2xl">
-            <span class="eyebrow">Proyectos e impacto</span>
-            <h2 class="balance mt-6 font-title text-3xl font-extrabold tracking-[-0.03em] text-biosys-text sm:text-4xl">
-              Proyectos
+          <div class="max-w-3xl">
+            <span class="eyebrow">Producción, Desarrollo y Formación</span>
+            <h1 class="balance mt-5 font-title text-3xl font-extrabold tracking-[-0.03em] text-biosys-text sm:text-4xl lg:text-5xl">
+              Proyectos y Resultados
+            </h1>
+            <p class="mt-4 text-base leading-7 text-biosys-soft sm:text-lg">
+              El impacto del laboratorio se articula a través de proyectos de investigación científica, formación de recursos humanos de alto nivel, desarrollo de tecnología patentable y organización de foros académicos de vinculación.
+            </p>
+          </div>
+        </div>
+
+        <!-- Barra de navegación rápida entre las 4 áreas -->
+        <div class="mt-8 flex flex-wrap gap-2.5 sm:gap-3">
+          <a
+            href="#proyectos-investigacion"
+            class="button-motion focus-ring inline-flex items-center gap-2 rounded-full border border-biosys-border bg-biosys-surface px-4 py-2 text-xs font-semibold text-biosys-text sm:text-sm hover:border-biosys-primary hover:text-biosys-primary shadow-xs"
+          >
+            <i data-lucide="folder-kanban" class="h-4 w-4 text-biosys-primary"></i>
+            Proyectos de Investigación
+          </a>
+          <a
+            href="#tesis-dirigidas"
+            class="button-motion focus-ring inline-flex items-center gap-2 rounded-full border border-biosys-border bg-biosys-surface px-4 py-2 text-xs font-semibold text-biosys-text sm:text-sm hover:border-biosys-primary hover:text-biosys-primary shadow-xs"
+          >
+            <i data-lucide="graduation-cap" class="h-4 w-4 text-biosys-primary"></i>
+            Tesis Dirigidas
+          </a>
+          <a
+            href="#patentes-modelos"
+            class="button-motion focus-ring inline-flex items-center gap-2 rounded-full border border-biosys-border bg-biosys-surface px-4 py-2 text-xs font-semibold text-biosys-text sm:text-sm hover:border-biosys-primary hover:text-biosys-primary shadow-xs"
+          >
+            <i data-lucide="award" class="h-4 w-4 text-biosys-primary"></i>
+            Patentes y Modelos
+          </a>
+          <a
+            href="#eventos-organizados"
+            class="button-motion focus-ring inline-flex items-center gap-2 rounded-full border border-biosys-border bg-biosys-surface px-4 py-2 text-xs font-semibold text-biosys-text sm:text-sm hover:border-biosys-primary hover:text-biosys-primary shadow-xs"
+          >
+            <i data-lucide="calendar" class="h-4 w-4 text-biosys-primary"></i>
+            Eventos Organizados
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. PROYECTOS DE INVESTIGACIÓN (INSTITUCIONALES Y FEDERALES) -->
+    <section id="proyectos-investigacion" class="section-shell scroll-mt-24 px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between border-b border-biosys-border pb-6">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-biosys-primary">
+              <i data-lucide="folder-kanban" class="h-4 w-4"></i>
+              Área 01
+            </div>
+            <h2 class="mt-2 font-title text-2xl font-extrabold tracking-[-0.02em] text-biosys-text sm:text-3xl">
+              Proyectos de Investigación
             </h2>
           </div>
-          <p class="max-w-2xl text-base leading-7 text-biosys-soft">
-            La investigación se materializa en prototipos, pilotos y metodologías que conectan automatización, sostenibilidad y formación avanzada.
+          <p class="max-w-xl text-sm leading-6 text-biosys-soft">
+            Iniciativas con financiamiento competitivo federal (CONAHCYT, fondos sectoriales) y convocatorias institucionales internas orientadas a la innovación en biosistemas.
           </p>
         </div>
 
-        <div class="mt-10 grid gap-5 lg:grid-cols-3">
-          <article class="card-lift panel flex h-full flex-col p-6">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Proyecto 01</p>
-            <h3 class="mt-4 font-title text-2xl font-bold text-biosys-text">Cultivos instrumentados</h3>
-            <p class="mt-4 flex-1 text-sm leading-7 text-biosys-soft">
-              Integración de sensores y rutinas de adquisición para comparar comportamientos de cultivo bajo diferentes condiciones ambientales.
-            </p>
-            <div class="mt-6 flex items-center justify-between text-sm font-medium text-biosys-text">
-              <span>Monitoreo y análisis</span>
-              <span class="cta-arrow" aria-hidden="true">↗</span>
+        <div class="mt-8 grid gap-6 lg:grid-cols-2">
+          <!-- Tarjeta Proyecto 1 (Federal) -->
+          <article class="card-lift panel p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-800 border border-emerald-300">
+                  Fondo Federal / CONAHCYT
+                </span>
+                <span class="text-xs font-medium text-biosys-soft">2024 – En desarrollo</span>
+              </div>
+              <h3 class="mt-4 font-title text-xl font-bold text-biosys-text leading-snug">
+                Automatización y Control Predictivo de Microclima en Invernaderos Sustentables
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-biosys-soft">
+                Desarrollo e implementación de algoritmos de control avanzado multivariable para la regulación de temperatura, humedad y CO₂ con minimización de consumo energético e hídrico.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-biosys-soft">
+                <span class="rounded-md bg-biosys-primaryTint/60 px-2.5 py-1 text-biosys-primary">Control Multivariable</span>
+                <span class="rounded-md bg-biosys-primaryTint/60 px-2.5 py-1 text-biosys-primary">Eficiencia Energética</span>
+                <span class="rounded-md bg-biosys-primaryTint/60 px-2.5 py-1 text-biosys-primary">IoT Agrícola</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Rol:</strong> Responsable Técnico</span>
+              <span class="font-semibold text-biosys-primary">Ref. CB-CONAHCYT-2024</span>
             </div>
           </article>
-          <article class="card-lift panel flex h-full flex-col p-6">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Proyecto 02</p>
-            <h3 class="mt-4 font-title text-2xl font-bold text-biosys-text">Robots para ensayo</h3>
-            <p class="mt-4 flex-1 text-sm leading-7 text-biosys-soft">
-              Plataformas de automatización diseñadas para experimentación, validación de tareas y estudio de operaciones repetitivas en entornos agrícolas.
-            </p>
-            <div class="mt-6 flex items-center justify-between text-sm font-medium text-biosys-text">
-              <span>Prototipado y validación</span>
-              <span class="cta-arrow" aria-hidden="true">↗</span>
+
+          <!-- Tarjeta Proyecto 2 (Federal) -->
+          <article class="card-lift panel p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-800 border border-emerald-300">
+                  Fondo Federal / Ciencia de Frontera
+                </span>
+                <span class="text-xs font-medium text-biosys-soft">2023 – 2025</span>
+              </div>
+              <h3 class="mt-4 font-title text-xl font-bold text-biosys-text leading-snug">
+                Plataforma Robótica Autónoma para Fenotipado Digital y Monitoreo de Estrés Vegetal
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-biosys-soft">
+                Diseño de un vehículo terrestre autónomo equipado con visión hiperespectral e inteligencia artificial para la detección temprana de anomalías fisiológicas y estrés hídrico.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-biosys-soft">
+                <span class="rounded-md bg-biosys-primaryTint/60 px-2.5 py-1 text-biosys-primary">Robótica Agrícola</span>
+                <span class="rounded-md bg-biosys-primaryTint/60 px-2.5 py-1 text-biosys-primary">Visión por Computadora</span>
+                <span class="rounded-md bg-biosys-primaryTint/60 px-2.5 py-1 text-biosys-primary">Fenotipado</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Rol:</strong> Colaboración Interinstitucional</span>
+              <span class="font-semibold text-biosys-primary">Ref. CF-2023-FONDOS</span>
             </div>
           </article>
-          <article class="card-lift panel flex h-full flex-col p-6">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Proyecto 03</p>
-            <h3 class="mt-4 font-title text-2xl font-bold text-biosys-text">Datos para decisión</h3>
-            <p class="mt-4 flex-1 text-sm leading-7 text-biosys-soft">
-              Desarrollo de marcos de observación y lectura que ayudan a interpretar fenómenos biológicos con criterios cuantitativos y contexto operativo.
-            </p>
-            <div class="mt-6 flex items-center justify-between text-sm font-medium text-biosys-text">
-              <span>Modelos y transferencia</span>
-              <span class="cta-arrow" aria-hidden="true">↗</span>
+
+          <!-- Tarjeta Proyecto 3 (Institucional) -->
+          <article class="card-lift panel p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-bold text-sky-800 border border-sky-300">
+                  Proyecto Institucional
+                </span>
+                <span class="text-xs font-medium text-biosys-soft">2024 – 2025</span>
+              </div>
+              <h3 class="mt-4 font-title text-xl font-bold text-biosys-text leading-snug">
+                Modelado Matemático y Estimación de Estados en Procesos de Fermentación y Biorreactores
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-biosys-soft">
+                Diseño de observadores no lineales y filtros adaptativos para la estimación en tiempo real de biomasa y concentración de sustrato en bioprocesos de pequeña escala.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-biosys-soft">
+                <span class="rounded-md bg-biosys-primaryTint/60 px-2.5 py-1 text-biosys-primary">Observadores No Lineales</span>
+                <span class="rounded-md bg-biosys-primaryTint/60 px-2.5 py-1 text-biosys-primary">Biorreactores</span>
+                <span class="rounded-md bg-biosys-primaryTint/60 px-2.5 py-1 text-biosys-primary">Estimación</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Rol:</strong> Responsable del Proyecto</span>
+              <span class="font-semibold text-biosys-primary">Ref. PIN-INST-2024-02</span>
+            </div>
+          </article>
+
+          <!-- Tarjeta Proyecto 4 (Institucional) -->
+          <article class="card-lift panel p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-bold text-sky-800 border border-sky-300">
+                  Proyecto Institucional
+                </span>
+                <span class="text-xs font-medium text-biosys-soft">2023 – Concluido</span>
+              </div>
+              <h3 class="mt-4 font-title text-xl font-bold text-biosys-text leading-snug">
+                Red Inalámbrica de Sensores de Bajo Costo para Monitoreo de Humedad de Suelo y Clima
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-biosys-soft">
+                Implementación y validación experimental de nodos sensores LoRaWAN de bajo consumo energético para el monitoreo distribuido en parcelas e invernaderos del campus.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-biosys-soft">
+                <span class="rounded-md bg-biosys-primaryTint/60 px-2.5 py-1 text-biosys-primary">LoRaWAN</span>
+                <span class="rounded-md bg-biosys-primaryTint/60 px-2.5 py-1 text-biosys-primary">Sensores de Suelo</span>
+                <span class="rounded-md bg-biosys-primaryTint/60 px-2.5 py-1 text-biosys-primary">Telemetría</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Rol:</strong> Director de Investigación</span>
+              <span class="font-semibold text-biosys-primary">Ref. PIN-INST-2023-08</span>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="px-4 py-4 sm:px-6 lg:px-8">
+    <!-- 2. TESIS DIRIGIDAS (DOCTORADO, MAESTRÍA, LICENCIATURA) -->
+    <section id="tesis-dirigidas" class="section-shell scroll-mt-24 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 bg-biosys-surfaceMuted/50">
       <div class="mx-auto max-w-7xl">
-        <div class="panel-muted grid gap-6 p-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:p-8">
-          <div class="max-w-xl">
-            <span class="eyebrow">Oportunidades</span>
-            <h2 class="balance mt-6 font-title text-3xl font-extrabold tracking-[-0.03em] text-biosys-text sm:text-4xl">
-              Vinculación abierta
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between border-b border-biosys-border pb-6">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-biosys-primary">
+              <i data-lucide="graduation-cap" class="h-4 w-4"></i>
+              Área 02
+            </div>
+            <h2 class="mt-2 font-title text-2xl font-extrabold tracking-[-0.02em] text-biosys-text sm:text-3xl">
+              Tesis Dirigidas
             </h2>
-            <p class="mt-5 text-base leading-7 text-biosys-soft">
-              Abrimos el laboratorio a colaboraciones académicas, estancias, proyectos aplicados y circulación de resultados con una mirada rigurosa y humana.
-            </p>
-            <a
-              href="./contacto.html"
-              class="button-motion cta-link focus-ring mt-8 inline-flex min-h-[44px] items-center gap-2 rounded-full border border-biosys-border bg-biosys-surface px-5 py-3 text-sm font-semibold text-biosys-text"
-            >
-              Iniciar contacto
-              <span class="cta-arrow" aria-hidden="true">→</span>
-            </a>
           </div>
+          <p class="max-w-xl text-sm leading-6 text-biosys-soft">
+            Formación científica y tecnológica de estudiantes en programas de Doctorado, Maestría y Licenciatura en ingeniería, automatización y biosistemas.
+          </p>
+        </div>
 
-          <div class="panel bg-biosys-surface/80 p-2">
-            <div class="impact-item grid gap-4 px-4 py-5 sm:grid-cols-[170px_minmax(0,1fr)] sm:px-5">
-              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Colaboración</p>
-              <div>
-                <h3 class="font-title text-lg font-bold text-biosys-text">Proyectos compartidos</h3>
-                <p class="mt-2 text-sm leading-7 text-biosys-soft">Espacios para co-diseñar pilotos, metodologías y plataformas experimentales con otros equipos e instituciones.</p>
+        <!-- Filtros interactivos de nivel académico -->
+        <div class="mt-8 flex flex-wrap items-center gap-2">
+          <button
+            type="button"
+            onclick="filterTheses('all')"
+            id="btn-thesis-all"
+            class="thesis-filter-btn rounded-full bg-biosys-primary px-4 py-1.5 text-xs font-semibold text-white transition-colors"
+          >
+            Todas las Tesis
+          </button>
+          <button
+            type="button"
+            onclick="filterTheses('doctorado')"
+            id="btn-thesis-doctorado"
+            class="thesis-filter-btn rounded-full border border-biosys-border bg-biosys-surface px-4 py-1.5 text-xs font-semibold text-biosys-text hover:border-biosys-primary transition-colors"
+          >
+            Doctorado
+          </button>
+          <button
+            type="button"
+            onclick="filterTheses('maestria')"
+            id="btn-thesis-maestria"
+            class="thesis-filter-btn rounded-full border border-biosys-border bg-biosys-surface px-4 py-1.5 text-xs font-semibold text-biosys-text hover:border-biosys-primary transition-colors"
+          >
+            Maestría
+          </button>
+          <button
+            type="button"
+            onclick="filterTheses('licenciatura')"
+            id="btn-thesis-licenciatura"
+            class="thesis-filter-btn rounded-full border border-biosys-border bg-biosys-surface px-4 py-1.5 text-xs font-semibold text-biosys-text hover:border-biosys-primary transition-colors"
+          >
+            Licenciatura / Ingeniería
+          </button>
+        </div>
+
+        <div id="theses-grid" class="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <!-- DOCTORADO (2) -->
+          <!-- Tesis Doctorado 1 -->
+          <article class="thesis-card card-lift panel p-6 flex flex-col justify-between" data-level="doctorado">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="rounded-full bg-purple-100 px-3 py-0.5 text-xs font-bold text-purple-900 border border-purple-300">
+                  Doctorado
+                </span>
+                <span class="text-xs font-medium text-emerald-700 font-semibold">Egresado</span>
               </div>
+              <h3 class="mt-4 font-title text-base font-bold text-biosys-text leading-snug">
+                Control del déficit de presión de vapor (dpvc) en cultivos de invernadero con sistemas de nebulización
+              </h3>
+              <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                <strong>Estudiante:</strong> José Orbelin Gutiérrez Hernández<br>
+                <strong>Programa:</strong> Doctorado en Ingeniería Agrícola y Uso Integral del Agua
+              </p>
             </div>
-            <div class="impact-item grid gap-4 px-4 py-5 sm:grid-cols-[170px_minmax(0,1fr)] sm:px-5">
-              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Formación</p>
-              <div>
-                <h3 class="font-title text-lg font-bold text-biosys-text">Estancias y mentoría</h3>
-                <p class="mt-2 text-sm leading-7 text-biosys-soft">Acompañamiento para estudiantes e investigadores interesados en automatización, sensado y análisis de biosistemas.</p>
+            <div class="mt-5 pt-3 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Grado Obtenido</strong></span>
+              <span class="font-semibold text-biosys-primary">2020</span>
+            </div>
+          </article>
+
+          <!-- Tesis Doctorado 2 -->
+          <article class="thesis-card card-lift panel p-6 flex flex-col justify-between" data-level="doctorado">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="rounded-full bg-purple-100 px-3 py-0.5 text-xs font-bold text-purple-900 border border-purple-300">
+                  Doctorado
+                </span>
+                <span class="text-xs font-medium text-emerald-700 font-semibold">Egresado</span>
               </div>
+              <h3 class="mt-4 font-title text-base font-bold text-biosys-text leading-snug">
+                Desarrollo de un sistema inteligente para el control mecánico de maleza en cultivos a hilera
+              </h3>
+              <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                <strong>Estudiante:</strong> Israel Gaytán Campos<br>
+                <strong>Programa:</strong> Doctorado en Ingeniería Agrícola y Uso Integral del Agua
+              </p>
             </div>
-            <div class="impact-item grid gap-4 px-4 py-5 sm:grid-cols-[170px_minmax(0,1fr)] sm:px-5">
-              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Publicaciones</p>
-              <div>
-                <h3 class="font-title text-lg font-bold text-biosys-text">Resultados documentados</h3>
-                <p class="mt-2 text-sm leading-7 text-biosys-soft">Comunicación de hallazgos, protocolos y avances con formatos claros para comunidad académica y socios externos.</p>
+            <div class="mt-5 pt-3 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Grado Obtenido</strong></span>
+              <span class="font-semibold text-biosys-primary">2023</span>
+            </div>
+          </article>
+
+          <!-- MAESTRÍA (3) -->
+          <!-- Tesis Maestría 1 -->
+          <article class="thesis-card card-lift panel p-6 flex flex-col justify-between" data-level="maestria">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="rounded-full bg-amber-100 px-3 py-0.5 text-xs font-bold text-amber-900 border border-amber-300">
+                  Maestría
+                </span>
+                <span class="text-xs font-medium text-emerald-700 font-semibold">Egresado</span>
               </div>
+              <h3 class="mt-4 font-title text-base font-bold text-biosys-text leading-snug">
+                Detección de fresas con visión artificial y algoritmos de aprendizaje profundo
+              </h3>
+              <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                <strong>Estudiante:</strong> Eleuterio González Jesús<br>
+                <strong>Programa:</strong> Maestría en Ingeniería Agrícola y Uso Integral del Agua
+              </p>
             </div>
-          </div>
+            <div class="mt-5 pt-3 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Grado Obtenido</strong></span>
+              <span class="font-semibold text-biosys-primary">2024</span>
+            </div>
+          </article>
+
+          <!-- Tesis Maestría 2 -->
+          <article class="thesis-card card-lift panel p-6 flex flex-col justify-between" data-level="maestria">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="rounded-full bg-amber-100 px-3 py-0.5 text-xs font-bold text-amber-900 border border-amber-300">
+                  Maestría
+                </span>
+                <span class="text-xs font-medium text-emerald-700 font-semibold">Egresado</span>
+              </div>
+              <h3 class="mt-4 font-title text-base font-bold text-biosys-text leading-snug">
+                Monitoreo 3D y análisis CFD del ambiente de un invernadero con ventilación natural
+              </h3>
+              <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                <strong>Estudiante:</strong> José Eduardo Rosales Vicelis<br>
+                <strong>Programa:</strong> Maestría en Ingeniería Agrícola y Uso Integral del Agua
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Grado Obtenido</strong></span>
+              <span class="font-semibold text-biosys-primary">2019</span>
+            </div>
+          </article>
+
+          <!-- Tesis Maestría 3 -->
+          <article class="thesis-card card-lift panel p-6 flex flex-col justify-between" data-level="maestria">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="rounded-full bg-amber-100 px-3 py-0.5 text-xs font-bold text-amber-900 border border-amber-300">
+                  Maestría
+                </span>
+                <span class="text-xs font-medium text-emerald-700 font-semibold">Egresado</span>
+              </div>
+              <h3 class="mt-4 font-title text-base font-bold text-biosys-text leading-snug">
+                Diseño de un sistema de calefacción solar para invernaderos sustentables
+              </h3>
+              <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                <strong>Estudiante:</strong> José Humberto López Díaz<br>
+                <strong>Programa:</strong> Maestría en Ingeniería Agrícola y Uso Integral del Agua
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Grado Obtenido</strong></span>
+              <span class="font-semibold text-biosys-primary">2018</span>
+            </div>
+          </article>
+
+          <!-- LICENCIATURA (7) -->
+          <!-- Tesis Licenciatura 1 -->
+          <article class="thesis-card card-lift panel p-6 flex flex-col justify-between" data-level="licenciatura">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="rounded-full bg-blue-100 px-3 py-0.5 text-xs font-bold text-blue-900 border border-blue-300">
+                  Licenciatura
+                </span>
+                <span class="text-xs font-medium text-emerald-700 font-semibold">Egresada</span>
+              </div>
+              <h3 class="mt-4 font-title text-base font-bold text-biosys-text leading-snug">
+                Desarrollo de una cámara de crecimiento para plantas con arquitecturas abiertas
+              </h3>
+              <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                <strong>Estudiante:</strong> Citlali Melchor Ramírez<br>
+                <strong>Programa:</strong> Mecánica Agrícola
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Grado Obtenido</strong></span>
+              <span class="font-semibold text-biosys-primary">2018</span>
+            </div>
+          </article>
+
+          <!-- Tesis Licenciatura 2 -->
+          <article class="thesis-card card-lift panel p-6 flex flex-col justify-between" data-level="licenciatura">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="rounded-full bg-blue-100 px-3 py-0.5 text-xs font-bold text-blue-900 border border-blue-300">
+                  Licenciatura
+                </span>
+                <span class="text-xs font-medium text-emerald-700 font-semibold">Egresada</span>
+              </div>
+              <h3 class="mt-4 font-title text-base font-bold text-biosys-text leading-snug">
+                Dimensionamiento de un sistema de calefacción solar para un invernadero sustentable
+              </h3>
+              <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                <strong>Estudiante:</strong> Regina Marín Cabrera<br>
+                <strong>Programa:</strong> Mecánica Agrícola
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Grado Obtenido</strong></span>
+              <span class="font-semibold text-biosys-primary">2018</span>
+            </div>
+          </article>
+
+          <!-- Tesis Licenciatura 3 -->
+          <article class="thesis-card card-lift panel p-6 flex flex-col justify-between" data-level="licenciatura">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="rounded-full bg-blue-100 px-3 py-0.5 text-xs font-bold text-blue-900 border border-blue-300">
+                  Licenciatura
+                </span>
+                <span class="text-xs font-medium text-emerald-700 font-semibold">Egresado</span>
+              </div>
+              <h3 class="mt-4 font-title text-base font-bold text-biosys-text leading-snug">
+                Análisis CFD del ambiente de un invernadero asimétrico con pared húmeda y extractores
+              </h3>
+              <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                <strong>Estudiante:</strong> Walver Adolfo López Díaz<br>
+                <strong>Programa:</strong> Mecánica Agrícola
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Grado Obtenido</strong></span>
+              <span class="font-semibold text-biosys-primary">2018</span>
+            </div>
+          </article>
+
+          <!-- Tesis Licenciatura 4 -->
+          <article class="thesis-card card-lift panel p-6 flex flex-col justify-between" data-level="licenciatura">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="rounded-full bg-blue-100 px-3 py-0.5 text-xs font-bold text-blue-900 border border-blue-300">
+                  Licenciatura
+                </span>
+                <span class="text-xs font-medium text-emerald-700 font-semibold">Egresado</span>
+              </div>
+              <h3 class="mt-4 font-title text-base font-bold text-biosys-text leading-snug">
+                Análisis CFD del ambiente nocturno de un invernadero asimétrico tipo chino
+              </h3>
+              <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                <strong>Estudiante:</strong> Ángel Jesús Aguilar Márquez<br>
+                <strong>Programa:</strong> Mecánica Agrícola
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Grado Obtenido</strong></span>
+              <span class="font-semibold text-biosys-primary">2018</span>
+            </div>
+          </article>
+
+          <!-- Tesis Licenciatura 5 -->
+          <article class="thesis-card card-lift panel p-6 flex flex-col justify-between" data-level="licenciatura">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="rounded-full bg-blue-100 px-3 py-0.5 text-xs font-bold text-blue-900 border border-blue-300">
+                  Licenciatura
+                </span>
+                <span class="text-xs font-medium text-emerald-700 font-semibold">Egresado</span>
+              </div>
+              <h3 class="mt-4 font-title text-base font-bold text-biosys-text leading-snug">
+                Diseño e instrumentación de un digestor prototipo para la producción de metano mediante codigestión anaerobia de nopal
+              </h3>
+              <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                <strong>Estudiante:</strong> Aldo Ordoñes Mendoza<br>
+                <strong>Programa:</strong> Mecánica Agrícola
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Grado Obtenido</strong></span>
+              <span class="font-semibold text-biosys-primary">2017</span>
+            </div>
+          </article>
+
+          <!-- Tesis Licenciatura 6 -->
+          <article class="thesis-card card-lift panel p-6 flex flex-col justify-between" data-level="licenciatura">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="rounded-full bg-blue-100 px-3 py-0.5 text-xs font-bold text-blue-900 border border-blue-300">
+                  Licenciatura
+                </span>
+                <span class="text-xs font-medium text-emerald-700 font-semibold">Egresados</span>
+              </div>
+              <h3 class="mt-4 font-title text-base font-bold text-biosys-text leading-snug">
+                Diseño y construcción de un cabezal cosechador para el cultivo de higuerilla
+              </h3>
+              <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                <strong>Estudiantes:</strong> José Humberto López Díaz, Eric Rafael Suárez Gaona<br>
+                <strong>Programa:</strong> Mecánica Agrícola
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Grado Obtenido</strong></span>
+              <span class="font-semibold text-biosys-primary">2016</span>
+            </div>
+          </article>
+
+          <!-- Tesis Licenciatura 7 -->
+          <article class="thesis-card card-lift panel p-6 flex flex-col justify-between" data-level="licenciatura">
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <span class="rounded-full bg-blue-100 px-3 py-0.5 text-xs font-bold text-blue-900 border border-blue-300">
+                  Licenciatura
+                </span>
+                <span class="text-xs font-medium text-emerald-700 font-semibold">Egresado</span>
+              </div>
+              <h3 class="mt-4 font-title text-base font-bold text-biosys-text leading-snug">
+                Desarrollo de un sistema de monitoreo de déficit de presión de vapor en cultivos de invernadero
+              </h3>
+              <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                <strong>Estudiante:</strong> José Eduardo Rosales Vicelis<br>
+                <strong>Programa:</strong> Mecánica Agrícola
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-biosys-border flex items-center justify-between text-xs text-biosys-soft">
+              <span><strong>Grado Obtenido</strong></span>
+              <span class="font-semibold text-biosys-primary">2016</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
+
+    <!-- 3. PATENTES Y MODELOS DE UTILIDAD -->
+    <section id="patentes-modelos" class="section-shell scroll-mt-24 px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between border-b border-biosys-border pb-6">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-biosys-primary">
+              <i data-lucide="award" class="h-4 w-4"></i>
+              Área 03
+            </div>
+            <h2 class="mt-2 font-title text-2xl font-extrabold tracking-[-0.02em] text-biosys-text sm:text-3xl">
+              Patentes y Modelos de Utilidad
+            </h2>
+          </div>
+          <p class="max-w-xl text-sm leading-6 text-biosys-soft">
+            Protección de propiedad intelectual, desarrollos tecnológicos y registros de invención derivados de la investigación aplicada del laboratorio ante el IMPI.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-6 lg:grid-cols-2">
+          <!-- Patente 1 -->
+          <article class="card-lift panel p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-800 border border-emerald-300">
+                  Patente de Invención Concedida
+                </span>
+                <span class="rounded-full bg-biosys-surfaceMuted px-2.5 py-0.5 text-xs font-semibold text-biosys-primary border border-biosys-border">
+                  Patente: MX 387282 B
+                </span>
+              </div>
+              <h3 class="mt-4 font-title text-lg font-bold text-biosys-text leading-snug">
+                Dispositivo portátil, de no contacto para la medición y monitoreo del déficit de presión de vapor (DPV) y déficit de humedad (DH) en cultivos de invernadero y de campo abierto
+              </h3>
+              <p class="mt-3 text-xs leading-6 text-biosys-soft text-justify">
+                Dispositivo portátil y no invasivo que integra una carcasa con flujo laminar de aire estable mediante ventilador, sensor infrarrojo para temperatura foliar del cultivo, tres sensores de temperatura del aire (Ta) y humedad relativa (HR), y sensor barométrico para autoajuste por altitud. Incluye microcontrolador con algoritmos embebidos, sincronización con reloj digital y memoria de almacenamiento de datos.
+              </p>
+              <div class="mt-4 space-y-1 text-xs text-biosys-soft bg-biosys-surfaceMuted/50 p-3.5 rounded-xl border border-biosys-border/70">
+                <p><strong>Número de solicitud:</strong> MX/a/2017/009910</p>
+                <p><strong>Fecha de concesión:</strong> 22/10/2021</p>
+                <p><strong>Publicación en Gaceta:</strong> 22/11/2021 (Ejemplar: Octubre de 2021)</p>
+                <p><strong>Organismo:</strong> Instituto Mexicano de la Propiedad Industrial (IMPI)</p>
+              </div>
+            </div>
+            <div class="mt-6 pt-3 border-t border-biosys-border flex items-center justify-between text-xs font-medium text-biosys-primary">
+              <span>Sección: Patentes</span>
+              <span class="font-semibold">Título de Patente en Vigor</span>
+            </div>
+          </article>
+
+          <!-- Patente 2 -->
+          <article class="card-lift panel p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-800 border border-emerald-300">
+                  Patente de Invención Concedida
+                </span>
+                <span class="rounded-full bg-biosys-surfaceMuted px-2.5 py-0.5 text-xs font-semibold text-biosys-primary border border-biosys-border">
+                  Patente: MX 386282 B
+                </span>
+              </div>
+              <h3 class="mt-4 font-title text-lg font-bold text-biosys-text leading-snug">
+                Sistema de control preciso de variables ambientales para la producción de plántulas en cámaras de crecimiento con ambiente controlado
+              </h3>
+              <p class="mt-3 text-xs leading-6 text-biosys-soft text-justify">
+                Cámara de crecimiento hermética con aislamiento térmico y repisas de altura variable para producción de plántulas. Integra videocámara para monitoreo remoto, sensores de temperatura, humedad relativa y sensor infrarrojo de CO₂, comunicados por internet con un sistema electrónico de control para iluminación, serpentín de enfriamiento, recirculación de aire, inyección de CO₂, riego dosificado por bomba sumergible, humidificación por saturación y captación de agua condensada.
+              </p>
+              <div class="mt-4 space-y-1 text-xs text-biosys-soft bg-biosys-surfaceMuted/50 p-3.5 rounded-xl border border-biosys-border/70">
+                <p><strong>Número de solicitud:</strong> MX/a/2018/015925</p>
+                <p><strong>Fecha de concesión:</strong> 20/09/2021</p>
+                <p><strong>Publicación en Gaceta:</strong> 22/10/2021 (Ejemplar: Septiembre de 2021)</p>
+                <p><strong>Organismo:</strong> Instituto Mexicano de la Propiedad Industrial (IMPI)</p>
+              </div>
+            </div>
+            <div class="mt-6 pt-3 border-t border-biosys-border flex items-center justify-between text-xs font-medium text-biosys-primary">
+              <span>Sección: Patentes</span>
+              <span class="font-semibold">Título de Patente en Vigor</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. EVENTOS ORGANIZADOS (CONGRESOS Y SIMPOSIOS) -->
+    <section id="eventos-organizados" class="section-shell scroll-mt-24 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 bg-biosys-surfaceMuted/50">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between border-b border-biosys-border pb-6">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-biosys-primary">
+              <i data-lucide="calendar" class="h-4 w-4"></i>
+              Área 04
+            </div>
+            <h2 class="mt-2 font-title text-2xl font-extrabold tracking-[-0.02em] text-biosys-text sm:text-3xl">
+              Eventos Organizados
+            </h2>
+          </div>
+          <p class="max-w-xl text-sm leading-6 text-biosys-soft">
+            Organización, coordinación y comités científicos en congresos nacionales e internacionales, simposios y coloquios de automatización y biosistemas.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-6 lg:grid-cols-2">
+          <!-- Evento 1: GreenSys2023 -->
+          <article class="card-lift panel p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-800 border border-emerald-300">
+                  Simposio Internacional (ISHS)
+                </span>
+                <span class="rounded-full bg-biosys-surfaceMuted px-2.5 py-0.5 text-xs font-semibold text-biosys-primary border border-biosys-border">
+                  22 – 27 de Octubre, 2023
+                </span>
+              </div>
+              <h3 class="mt-4 font-title text-xl font-bold text-biosys-text leading-snug">
+                GreenSys2023: International Symposium on New Technologies for Sustainable Greenhouse Systems
+              </h3>
+              <p class="mt-3 text-xs leading-6 text-biosys-soft text-justify">
+                Simposio internacional de la Sociedad Internacional de Ciencias Hortícolas (ISHS) dedicado al intercambio de avances en nuevas tecnologías, modelación, control ambiental y automatización para sistemas de invernadero sustentables.
+              </p>
+              <div class="mt-4 space-y-1.5 text-xs text-biosys-soft bg-biosys-surfaceMuted/50 p-3.5 rounded-xl border border-biosys-border/70">
+                <p><strong>Conveners / Organizadores:</strong> Dr. Irineo López Cruz & Prof. Dr. Efrén Fitz-Rodríguez (UACh / IAUIA)</p>
+                <p><strong>Sede:</strong> Cancún, México</p>
+                <p><strong>Divisiones y Grupos ISHS:</strong> Precision Horticulture and Engineering, Greenhouse & Indoor Production, Light in Horticulture, Modelling Plant Growth & Environmental Control</p>
+              </div>
+            </div>
+            <div class="mt-6 pt-3 border-t border-biosys-border flex items-center justify-between text-xs font-medium text-biosys-primary">
+              <span>#Greensys2023</span>
+              <span class="font-semibold">Simposio Internacional Concluido</span>
+            </div>
+          </article>
+
+          <!-- Evento 2: 2nd International Workshop -->
+          <article class="card-lift panel p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="rounded-full bg-teal-100 px-3 py-1 text-xs font-bold text-teal-800 border border-teal-300">
+                  Workshop Internacional
+                </span>
+                <span class="rounded-full bg-biosys-surfaceMuted px-2.5 py-0.5 text-xs font-semibold text-biosys-primary border border-biosys-border">
+                  25 de Septiembre, 2018
+                </span>
+              </div>
+              <h3 class="mt-4 font-title text-xl font-bold text-biosys-text leading-snug">
+                2nd International Workshop: Urban Horticulture in Controlled Environments
+              </h3>
+              <p class="mt-3 text-xs leading-6 text-biosys-soft text-justify">
+                Taller internacional enfocado en sistemas agrícolas del futuro, tecnologías de iluminación LED y HPS, secadores solares, vegetación en azoteas, redes neuronales (ANN) para simulación de fotosíntesis y transpiración en invernaderos semicerrados, y regeneración socio-ambiental a través de huertos urbanos.
+              </p>
+              <div class="mt-4 space-y-1.5 text-xs text-biosys-soft bg-biosys-surfaceMuted/50 p-3.5 rounded-xl border border-biosys-border/70">
+                <p><strong>Coordinación / Contacto:</strong> Dr. Efrén Fitz Rodríguez (Ing. Mecánica Agrícola & Posgrado IAUIA, UACh)</p>
+                <p><strong>Sede:</strong> Auditorio Emiliano Zapata, Universidad Autónoma Chapingo, México</p>
+                <p><strong>Instituciones Participantes:</strong> Universidad Autónoma Chapingo, Humboldt-Universität zu Berlin, CONACYT, BMBF (Alemania), SEDEREC</p>
+              </div>
+            </div>
+            <div class="mt-6 pt-3 border-t border-biosys-border flex items-center justify-between text-xs font-medium text-biosys-primary">
+              <span>UACh & Humboldt-Universität</span>
+              <span class="font-semibold">Workshop Binacional Concluido</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- Footer -->
   <footer class="px-4 pb-10 pt-16 sm:px-6 sm:pb-12 lg:px-8 lg:pt-24">
     <div class="mx-auto max-w-7xl">
       <div class="panel overflow-hidden">
@@ -193,7 +775,7 @@
             </div>
             <div class="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
               <a
-                href="./inicio.html"
+                href="#proyectos-investigacion"
                 class="button-motion focus-ring inline-flex min-h-[44px] items-center rounded-full bg-biosys-primary px-5 py-3 text-sm font-semibold text-[var(--biosys-color-surface)]"
               >
                 Volver arriba
@@ -211,5 +793,38 @@
     </div>
   </footer>
 
+  <!-- Script para Lucide Icons y filtrado interactivo de tesis -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    });
+
+    function filterTheses(level) {
+      const cards = document.querySelectorAll(".thesis-card");
+      const buttons = document.querySelectorAll(".thesis-filter-btn");
+
+      buttons.forEach(btn => {
+        btn.classList.remove("bg-biosys-primary", "text-white");
+        btn.classList.add("bg-biosys-surface", "text-biosys-text", "border", "border-biosys-border");
+      });
+
+      const activeBtn = document.getElementById("btn-thesis-" + level);
+      if (activeBtn) {
+        activeBtn.classList.add("bg-biosys-primary", "text-white");
+        activeBtn.classList.remove("bg-biosys-surface", "text-biosys-text");
+      }
+
+      cards.forEach(card => {
+        if (level === "all" || card.getAttribute("data-level") === level) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
 </body>
 </html>
+
