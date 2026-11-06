@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | Laboratorio de Modelación y Automatización de Biosistemas</title>
+    <title>Contacto y Ubicación | Laboratorio de Modelación y Automatización de Biosistemas</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
     <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
@@ -14,6 +14,10 @@
     --color-surface: var(--biosys-color-surface);
     --color-muted: var(--biosys-color-surface-muted);
     --color-border: var(--biosys-color-border);
+    --color-biosys-primary: var(--biosys-color-primary-500);
+    --color-biosys-text: var(--biosys-color-text);
+    --color-biosys-soft: var(--biosys-color-text-soft);
+    --color-biosys-surface: var(--biosys-color-surface);
     --color-primary: var(--biosys-color-primary-500);
     --color-primary-deep: var(--biosys-color-primary-700);
     --color-primary-soft: var(--biosys-color-primary-50);
@@ -33,10 +37,11 @@
     </style>
 </head>
 <body class="font-body text-biosys-text antialiased">
+  <!-- Header / Barra de Navegación -->
   <header class="fixed inset-x-0 top-0 z-50 border-b border-biosys-border/80 bg-[rgba(247,244,238,0.9)] backdrop-blur-md">
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
       <a href="./inicio.html" class="focus-ring inline-flex min-w-0 items-center gap-4 sm:gap-6">
-        <span class="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface p-2 sm:h-28 sm:w-28">
+        <span class="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface p-2 sm:h-24 sm:w-24">
           <img
             src="./assets/Logo.jpeg"
             alt="Logo del Laboratorio de Modelación y Automatización de Biosistemas"
@@ -51,6 +56,7 @@
       <nav aria-label="Navegación principal" class="hidden items-center gap-6 text-sm font-medium text-biosys-soft md:flex">
         <a class="nav-link focus-ring" href="./inicio.html">Inicio</a>
         <a class="nav-link focus-ring" href="./investigacion.html">Investigación</a>
+        <a class="nav-link focus-ring" href="./infraestructura.html">Infraestructura</a>
         <a class="nav-link focus-ring" href="./proyectos.html">Proyectos</a>
         <a class="nav-link active focus-ring" href="./contacto.html">Contacto</a>
       </nav>
@@ -64,84 +70,359 @@
   </header>
 
   <main class="overflow-hidden pt-28 sm:pt-32">
-    <section class="section-shell hero-grid relative px-4 pb-14 pt-6 sm:px-6 md:pb-20 lg:px-8 lg:pb-24">
-      <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:gap-16">
+    <!-- Hero / Presentación de Contacto -->
+    <section class="section-shell px-4 pb-10 pt-10 sm:px-6 sm:pb-14 lg:px-8">
+      <div class="mx-auto max-w-7xl">
         <div class="max-w-3xl">
-          <span class="eyebrow">Contacto y vinculación</span>
-          <h1 class="balance mt-6 font-title text-4xl font-extrabold leading-none tracking-[-0.04em] text-biosys-text sm:text-5xl lg:text-6xl">
-            Conversemos
+          <span class="eyebrow">Canales de Comunicación y Ubicación</span>
+          <h1 class="balance mt-5 font-title text-3xl font-extrabold tracking-[-0.03em] text-biosys-text sm:text-4xl lg:text-5xl">
+            Contacto y del Laboratorio
           </h1>
-          <p class="mt-6 max-w-2xl text-base leading-7 text-biosys-soft sm:text-lg sm:leading-8">
-              Si buscas colaborar, desarrollar tesis de investigación, realizar una estancia academica o de investigación o conocer mejor nuestras instalaciones, este es el punto de partida.
+          <p class="mt-4 text-base leading-7 text-biosys-soft sm:text-lg">
+            Estamos ubicados en instalaciones del Departamento de Ingeniería Mecánica Agrícola dentro de las instalaciondes de la Universidad Autónoma Chapingo.<br> 
+            <br>
+            Contáctanos para estancias de investigación, desarrollo de tesis, proyectos tecnológicos o visitas al laboratorio.
           </p>
-          <div class="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-            <a
-              href="./proyectos.html"
-              class="button-motion cta-link focus-ring inline-flex min-h-[44px] items-center gap-2 rounded-full bg-biosys-primary px-6 py-3 text-sm font-semibold text-[var(--biosys-color-surface)]"
-            >
-              Ver proyectos
-              <span class="cta-arrow" aria-hidden="true">→</span>
-            </a>
-            <a
-              href="./investigacion.html"
-              class="button-motion focus-ring inline-flex min-h-[44px] items-center rounded-full border border-biosys-border bg-biosys-surface px-6 py-3 text-sm font-semibold text-biosys-text"
-            >
-              Ver investigación
-            </a>
-          </div>
         </div>
 
-        <div class="panel-muted grid gap-4 p-6 sm:grid-cols-3 lg:grid-cols-1">
-          <div class="rounded-2xl border border-biosys-border/80 bg-biosys-surface p-5">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Consultas</p>
-            <p class="mt-3 text-sm leading-7 text-biosys-soft">Información sobre líneas de investigación, capacidades del laboratorio y posibilidades de colaboración.</p>
+        <!-- Tarjetas de Información Rápida (Correo, Teléfono, Ubicación, Horario) -->
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Correo -->
+          <a
+            href="mailto:contacto.lmab@chapingo.mx"
+            class="panel p-5 card-lift group transition-all"
+          >
+            <div class="flex items-center gap-3">
+              <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-biosys-primary/10 text-biosys-primary group-hover:bg-biosys-primary group-hover:text-white transition-colors">
+                <i data-lucide="mail" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Correo electrónico</p>
+                <p class="font-title text-base font-bold text-biosys-text group-hover:text-biosys-primary transition-colors break-all">laboratoriodebiosistemas@gmail.com</p>
+              </div>
+            </div>
+            <p class="mt-3 text-xs leading-5 text-biosys-soft">
+              Consultas generales, proyectos de investigación y colaboraciones académicas.
+            </p>
+          </a>
+
+          <!-- Teléfono -->
+          <a
+            href="tel:+525951121943"
+            class="panel p-5 card-lift group transition-all"
+          >
+            <div class="flex items-center gap-3">
+              <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-biosys-primary/10 text-biosys-primary group-hover:bg-biosys-primary group-hover:text-white transition-colors">
+                <i data-lucide="phone" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Teléfono directo</p>
+                <p class="font-title text-base font-bold text-biosys-text group-hover:text-biosys-primary transition-colors">+52 (595) 112-1943</p>
+              </div>
+            </div>
+            <p class="mt-3 text-xs leading-5 text-biosys-soft">
+              Telefono celular para consultas rápidas y coordinación de visitas al laboratorio.
+            </p>
+          </a>
+
+          <!-- Ubicación -->
+          <div class="panel p-5">
+            <div class="flex items-center gap-3">
+              <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-biosys-primary/10 text-biosys-primary">
+                <i data-lucide="map-pin" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Ubicación</p>
+                <p class="font-title text-base font-bold text-biosys-text">UACh, Texcoco</p>
+              </div>
+            </div>
+            <p class="mt-3 text-xs leading-5 text-biosys-soft">
+              Km 38.5 Carretera México-Texcoco, Chapingo, Texcoco, Edo. de México, C.P. 56230.
+            </p>
           </div>
-          <div class="rounded-2xl border border-biosys-border/80 bg-biosys-surface p-5">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Vinculación</p>
-            <p class="mt-3 text-sm leading-7 text-biosys-soft">Proyectos conjuntos, pilotos en entorno controlado, transferencia metodológica y trabajo interdisciplinario.</p>
+
+          <!-- Horario -->
+          <div class="panel p-5">
+            <div class="flex items-center gap-3">
+              <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-biosys-primary/10 text-biosys-primary">
+                <i data-lucide="clock" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Horario de atención</p>
+                <p class="font-title text-base font-bold text-biosys-text">Lunes a Viernes</p>
+              </div>
+            </div>
+            <p class="mt-3 text-xs leading-5 text-biosys-soft">
+              09:00 - 18:00 hrs (Horario del centro de México). Visitas presenciales previa cita.
+            </p>
           </div>
-          <div class="rounded-2xl border border-biosys-border/80 bg-biosys-surface p-5">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Trayectoria</p>
-            <p class="mt-3 text-sm leading-7 text-biosys-soft">Un espacio para conectar investigación aplicada, observación precisa y automatización con impacto académico y territorial.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 1: Campus & Laboratorio (Mapa de Ubicación y Coordenadas) -->
+    <section class="section-shell bg-biosys-surface/50 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 border-y border-biosys-border/60">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <span class="eyebrow">Campus & Laboratorio</span>
+            <h2 class="balance mt-4 font-title text-2xl font-bold tracking-[-0.02em] text-biosys-text sm:text-3xl lg:text-4xl">
+              Ubicación en la Universidad Autónoma Chapingo
+            </h2>
+            <p class="mt-2 text-base text-biosys-soft">
+              Encuentra la localización exacta del LMAB dentro del campus universitario.
+            </p>
+          </div>
+          <a
+            href="https://www.google.com/maps?q=19.491361,-98.893389"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button-motion cta-link focus-ring inline-flex items-center gap-2 rounded-full border border-biosys-border bg-biosys-surface px-5 py-2.5 text-xs font-semibold text-biosys-text hover:border-biosys-primary hover:text-biosys-primary"
+          >
+            <i data-lucide="external-link" class="h-4 w-4 text-biosys-primary"></i>
+            Abrir en Google Maps
+            <span class="cta-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="mt-10 grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-stretch">
+          <!-- Columna izquierda: Coordenadas y Detalles del Campus (estilo referencia visual) -->
+          <div class="flex flex-col justify-between rounded-2xl border border-biosys-border bg-biosys-surface p-6 sm:p-8 shadow-soft">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-biosys-primary">
+                <i data-lucide="navigation" class="h-4 w-4"></i>
+                Coordenadas del Laboratorio (GPS)
+              </div>
+              
+              <div class="mt-4">
+                <p class="font-title text-3xl font-extrabold tracking-tight text-biosys-text sm:text-4xl">
+                  19.491361, -98.893389
+                </p>
+                <p class="mt-1 text-xs text-biosys-soft">
+                  Latitud 19° 29′ 28.9″ N, Longitud 98° 53′ 36.2″ O · Altitud ~2,250 msnm
+                </p>
+              </div>
+
+              <div class="mt-6 divide-y divide-biosys-border/80 text-sm">
+                <div class="py-3 flex justify-between gap-4">
+                  <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary">Institución</span>
+                  <span class="text-right text-biosys-text font-medium">Universidad Autónoma Chapingo (UACh)</span>
+                </div>
+                <div class="py-3 flex justify-between gap-4">
+                  <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary">Campus</span>
+                  <span class="text-right text-biosys-text font-medium">Campus Central Texcoco</span>
+                </div>
+                <div class="py-3 flex justify-between gap-4">
+                  <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary">Instalaciones</span>
+                  <span class="text-right text-biosys-text font-medium">Departamento de Ingeniería Mecánica Agrícola</span>
+                </div>
+                <div class="py-3 flex justify-between gap-4">
+                  <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary">Acceso</span>
+                  <span class="text-right text-biosys-text font-medium">Acceso principal por Carretera México-Texcoco</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-xl border border-biosys-border/80 bg-biosys-surface-muted/60 p-4">
+              <div class="flex items-start gap-3">
+                <i data-lucide="info" class="h-5 w-5 shrink-0 text-biosys-primary mt-0.5"></i>
+                <div class="text-xs leading-5 text-biosys-soft">
+                  <strong class="text-biosys-text">Indicaciones para visitantes:</strong> Al ingresar al campus, dirígete hacia el Centro Experimental de Energias Renovables y Biosistemas. Es recomendable anunciar tu llegada en caseta de vigilancia con tu confirmación de cita.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha: Mapa interactivo de Google Maps -->
+          <div class="panel overflow-hidden rounded-2xl border border-biosys-border shadow-soft flex flex-col">
+            <div class="relative h-80 w-full flex-1 sm:min-h-[360px]">
+              <iframe
+                title="Mapa de ubicación de la Universidad Autónoma Chapingo y LMAB"
+                src="https://maps.google.com/maps?q=Universidad%20Aut%C3%B3noma%20Chapingo,%20Texcoco&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                class="h-full w-full border-0"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="flex items-center justify-between border-t border-biosys-border bg-biosys-surface px-5 py-3 text-xs text-biosys-soft">
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="map" class="h-3.5 w-3.5 text-biosys-primary"></i>
+                Haz clic en el mapa para interactuar o ver rutas
+              </span>
+              <a
+                href="https://www.google.com/maps?q=19.489644,-98.893551"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-semibold text-biosys-primary hover:underline"
+              >
+                Ver mapa completo ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 2: Formulario de Contacto (Siguiendo fielmente la imagen de referencia) -->
+    <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
+          <!-- Columna izquierda: Fill in the form to send us a message: -->
+          <div>
+            <span class="eyebrow">Mensaje Directo</span>
+            <h2 class="balance mt-4 font-title text-2xl font-bold tracking-[-0.02em] text-biosys-text sm:text-3xl lg:text-4xl">
+              Rellena el formulario para enviarnos un mensaje:
+            </h2>
+            <p class="mt-4 text-base leading-7 text-biosys-soft">
+              Completa los campos con tus datos y el motivo de tu consulta. Tu mensaje será recibido por los investigadores y responsables técnicos del laboratorio.
+            </p>
+
+            <div class="mt-8 space-y-4">
+              <div class="flex items-start gap-3 rounded-2xl border border-biosys-border/80 bg-biosys-surface p-4">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-biosys-primary/10 text-biosys-primary">
+                  <i data-lucide="graduation-cap" class="h-5 w-5"></i>
+                </span>
+                <div>
+                  <h3 class="font-title text-sm font-bold text-biosys-text">Tesis y Proyectos Académicos</h3>
+                  <p class="mt-1 text-xs leading-5 text-biosys-soft">
+                    Si eres estudiante de licenciatura o posgrado, especifica tu área de interés (control, modelación, robótica o instrumentación).
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 rounded-2xl border border-biosys-border/80 bg-biosys-surface p-4">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-biosys-primary/10 text-biosys-primary">
+                  <i data-lucide="handshake" class="h-5 w-5"></i>
+                </span>
+                <div>
+                  <h3 class="font-title text-sm font-bold text-biosys-text">Convenios y Vinculación</h3>
+                  <p class="mt-1 text-xs leading-5 text-biosys-soft">
+                    Abiertos a la colaboración con centros de investigación, empresas del sector agrícola e instituciones educativas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha: Campos del Formulario (Nombre, Correo, Asunto, Mensaje, Enviar) -->
+          <div class="panel rounded-2xl border border-biosys-border bg-biosys-surface p-6 sm:p-10 shadow-soft">
+            <form id="contactForm" class="space-y-6">
+              <!-- Nombre (necesario) -->
+              <div>
+                <label for="nombre" class="block text-xs font-semibold uppercase tracking-[0.12em] text-biosys-soft mb-2">
+                  Tu nombre (necesario)
+                </label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  required
+                  class="w-full rounded-xl border border-biosys-border bg-biosys-surface px-4 py-3 text-sm text-biosys-text placeholder:text-biosys-soft/50 focus:border-biosys-primary focus:outline-none focus:ring-2 focus:ring-biosys-primary/20 transition-all"
+                  placeholder="Ingresa tu nombre completo"
+                />
+              </div>
+
+              <!-- Correo electrónico (necesario) -->
+              <div>
+                <label for="correo" class="block text-xs font-semibold uppercase tracking-[0.12em] text-biosys-soft mb-2">
+                  Tu correo electrónico (necesario)
+                </label>
+                <input
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  required
+                  class="w-full rounded-xl border border-biosys-border bg-biosys-surface px-4 py-3 text-sm text-biosys-text placeholder:text-biosys-soft/50 focus:border-biosys-primary focus:outline-none focus:ring-2 focus:ring-biosys-primary/20 transition-all"
+                  placeholder="ejemplo@correo.com"
+                />
+              </div>
+
+              <!-- Asunto -->
+              <div>
+                <label for="asunto" class="block text-xs font-semibold uppercase tracking-[0.12em] text-biosys-soft mb-2">
+                  Asunto
+                </label>
+                <input
+                  type="text"
+                  id="asunto"
+                  name="asunto"
+                  required
+                  class="w-full rounded-xl border border-biosys-border bg-biosys-surface px-4 py-3 text-sm text-biosys-text placeholder:text-biosys-soft/50 focus:border-biosys-primary focus:outline-none focus:ring-2 focus:ring-biosys-primary/20 transition-all"
+                  placeholder="Motivo del mensaje o consulta"
+                />
+              </div>
+
+              <!-- Mensaje -->
+              <div>
+                <label for="mensaje" class="block text-xs font-semibold uppercase tracking-[0.12em] text-biosys-soft mb-2">
+                  Tu mensaje
+                </label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="5"
+                  required
+                  class="w-full rounded-xl border border-biosys-border bg-biosys-surface px-4 py-3 text-sm text-biosys-text placeholder:text-biosys-soft/50 focus:border-biosys-primary focus:outline-none focus:ring-2 focus:ring-biosys-primary/20 transition-all resize-y"
+                  placeholder="Escribe aquí los detalles de tu consulta, estancia o propuesta de colaboración..."
+                ></textarea>
+              </div>
+
+              <!-- Botón de Envío -->
+              <div class="pt-2">
+                <button
+                  type="submit"
+                  id="submitBtn"
+                  class="button-motion cta-link focus-ring inline-flex min-h-[46px] w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-biosys-primary px-8 py-3.5 text-sm font-semibold text-[var(--biosys-color-surface)] shadow-sm hover:opacity-95"
+                >
+                  <span>Enviar mensaje</span>
+                  <i data-lucide="send" class="h-4 w-4"></i>
+                </button>
+              </div>
+
+              <!-- Contenedor para alerta / feedback dinámico -->
+              <div id="formStatus" class="hidden pt-2"></div>
+            </form>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="px-4 pb-10 pt-16 sm:px-6 sm:pb-12 lg:px-8 lg:pt-24">
+  <!-- Footer -->
+  <footer class="px-4 pb-10 pt-16 sm:px-6 sm:pb-12 lg:px-8 lg:pt-24 border-t border-biosys-border/60">
     <div class="mx-auto max-w-7xl">
       <div class="panel overflow-hidden">
         <div class="grid gap-0 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
           <div class="bg-biosys-primary px-6 py-10 text-[var(--biosys-color-surface)] sm:px-8 sm:py-12">
-            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-white/70">Contacto</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-white/70">Laboratorio LMAB</p>
             <h2 class="balance mt-4 font-title text-3xl font-extrabold tracking-[-0.03em] text-white sm:text-4xl">
-              Conversemos
+              Universidad Autónoma Chapingo
             </h2>
             <p class="mt-5 max-w-xl text-base leading-7 text-white/82">
-              Si buscas colaborar, desarrollar un piloto, abrir una estancia o conocer mejor nuestras capacidades, este es el punto de partida.
+              Investigación científica y tecnológica aplicada a la modelación, instrumentación y control en biosistemas sostenibles.
             </p>
           </div>
 
           <div class="bg-biosys-surface px-6 py-8 sm:px-8 sm:py-10">
             <div class="contact-row grid gap-3 py-4 sm:grid-cols-[150px_minmax(0,1fr)]">
               <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Consultas</p>
-              <p class="text-sm leading-7 text-biosys-soft">Información sobre líneas de investigación, capacidades del laboratorio y posibilidades de colaboración.</p>
+              <p class="text-sm leading-7 text-biosys-soft">contacto.lmab@chapingo.mx · Respuesta habitual en 24-48 horas hábiles.</p>
+            </div>
+            <div class="contact-row grid gap-3 py-4 sm:grid-cols-[150px_minmax(0,1fr)]">
+              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Ubicación</p>
+              <p class="text-sm leading-7 text-biosys-soft">Km 38.5 Carretera México-Texcoco, Chapingo, Estado de México, C.P. 56230.</p>
             </div>
             <div class="contact-row grid gap-3 py-4 sm:grid-cols-[150px_minmax(0,1fr)]">
               <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Vinculación</p>
-              <p class="text-sm leading-7 text-biosys-soft">Proyectos conjuntos, pilotos en entorno controlado, transferencia metodológica y trabajo interdisciplinario.</p>
-            </div>
-            <div class="contact-row grid gap-3 py-4 sm:grid-cols-[150px_minmax(0,1fr)]">
-              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Trayectoria</p>
-              <p class="text-sm leading-7 text-biosys-soft">Un espacio para conectar investigación aplicada, observación precisa y automatización con impacto académico y territorial.</p>
+              <p class="text-sm leading-7 text-biosys-soft">Estancias de posgrado, proyectos de titulación y transferencia tecnológica.</p>
             </div>
             <div class="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
               <a
                 href="./inicio.html"
                 class="button-motion focus-ring inline-flex min-h-[44px] items-center rounded-full bg-biosys-primary px-5 py-3 text-sm font-semibold text-[var(--biosys-color-surface)]"
               >
-                Volver arriba
+                Volver a Inicio
               </a>
               <a
                 href="./investigacion.html"
@@ -156,5 +437,53 @@
     </div>
   </footer>
 
+  <!-- Scripts: Lucide Icons & Lógica del Formulario -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      const form = document.getElementById("contactForm");
+      const statusDiv = document.getElementById("formStatus");
+
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const nombre = document.getElementById("nombre").value.trim();
+          const correo = document.getElementById("correo").value.trim();
+          const asunto = document.getElementById("asunto").value.trim();
+          const mensaje = document.getElementById("mensaje").value.trim();
+
+          const subject = encodeURIComponent(`[Contacto LMAB] ${asunto}`);
+          const body = encodeURIComponent(`Nombre: ${nombre}\nCorreo: ${correo}\n\nMensaje:\n${mensaje}`);
+          const mailtoLink = `mailto:contacto.lmab@chapingo.mx?subject=${subject}&body=${body}`;
+
+          // Abrir cliente de correo del usuario
+          window.location.href = mailtoLink;
+
+          // Mostrar confirmación visual amigable
+          if (statusDiv) {
+            statusDiv.classList.remove("hidden");
+            statusDiv.innerHTML = `
+              <div class="rounded-2xl border border-biosys-primary/30 bg-biosys-primary/10 p-5 text-biosys-text">
+                <div class="flex items-center gap-2.5 font-bold text-biosys-primary">
+                  <i data-lucide="check-circle-2" class="h-5 w-5"></i>
+                  <span>¡Mensaje preparado exitosamente!</span>
+                </div>
+                <p class="mt-2 text-xs leading-5 text-biosys-soft">
+                  Se ha generado la plantilla de correo para <strong>contacto.lmab@chapingo.mx</strong> en tu cliente de correo. Si no se abrió automáticamente, puedes <a href="${mailtoLink}" class="font-semibold text-biosys-primary underline">hacer clic aquí para abrir tu correo y enviarlo</a>.
+                </p>
+              </div>
+            `;
+            if (window.lucide) {
+              lucide.createIcons();
+            }
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
