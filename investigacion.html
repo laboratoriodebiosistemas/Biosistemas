@@ -14,6 +14,10 @@
     --color-surface: var(--biosys-color-surface);
     --color-muted: var(--biosys-color-surface-muted);
     --color-border: var(--biosys-color-border);
+    --color-biosys-primary: var(--biosys-color-primary-500);
+    --color-biosys-text: var(--biosys-color-text);
+    --color-biosys-soft: var(--biosys-color-text-soft);
+    --color-biosys-surface: var(--biosys-color-surface);
     --color-primary: var(--biosys-color-primary-500);
     --color-primary-deep: var(--biosys-color-primary-700);
     --color-primary-soft: var(--biosys-color-primary-50);
@@ -69,86 +73,606 @@
       <div class="mx-auto max-w-7xl">
         <div class="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
           <div class="max-w-xl">
-            <span class="eyebrow">Líneas de trabajo</span>
+            <span class="eyebrow">Áreas de investigación</span>
             <h2 class="balance mt-6 font-title text-3xl font-extrabold tracking-[-0.03em] text-biosys-text sm:text-4xl">
-              Investigación
+              Líneas de Investigación
             </h2>
             <p class="mt-5 text-base leading-7 text-biosys-soft sm:text-lg sm:leading-8">
-              El laboratorio articula investigación aplicada, infraestructura experimental y colaboración interdisciplinaria para transformar datos biológicos en decisiones útiles.
+              El laboratorio articula investigación aplicada, modelación matemática y desarrollo tecnológico para optimizar biosistemas agrícolas de manera sustentable y eficiente.
             </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#equipo"
+                class="button-motion cta-link focus-ring inline-flex items-center gap-2 rounded-full border border-biosys-border bg-biosys-surface px-5 py-2.5 text-xs font-semibold text-biosys-text hover:border-biosys-primary hover:text-biosys-primary shadow-xs"
+              >
+                <i data-lucide="users" class="h-4 w-4 text-biosys-primary"></i>
+                Ver Equipo de Investigación
+                <span class="cta-arrow" aria-hidden="true">↓</span>
+              </a>
+            </div>
           </div>
 
           <div class="grid gap-5 md:grid-cols-2">
-            <article class="card-lift panel focus-ring p-6">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="font-title text-xl font-bold text-biosys-text">Sensado ambiental</h3>
-                <span class="chip-motion rounded-full bg-biosys-primaryTint px-3 py-1 text-xs font-semibold text-biosys-primary">Microclima</span>
+            <article class="card-lift panel focus-ring p-6 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Área de investigación 01</p>
+                <h3 class="mt-3 font-title text-xl font-bold text-biosys-text">Modelación matemática</h3>
+                <p class="mt-3 text-sm leading-7 text-biosys-soft">
+                  Desarrollo de modelos matemáticos para describir, analizar y predecir el comportamiento dinámico de biosistemas complejos.
+                </p>
               </div>
-              <p class="mt-4 text-sm leading-7 text-biosys-soft">
-                Diseño e integración de redes de medición para observar condiciones críticas en cultivo, laboratorio e infraestructura agrícola.
-              </p>
             </article>
-            <article class="card-lift panel focus-ring p-6">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="font-title text-xl font-bold text-biosys-text">Automatización experimental</h3>
-                <span class="chip-motion rounded-full bg-biosys-primaryTint px-3 py-1 text-xs font-semibold text-biosys-primary">Control</span>
+
+            <article class="card-lift panel focus-ring p-6 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Área de investigación 02</p>
+                <h3 class="mt-3 font-title text-xl font-bold text-biosys-text">Sistemas de control</h3>
+                <p class="mt-3 text-sm leading-7 text-biosys-soft">
+                  Diseño de estrategias de control para la regulación del microclima y fertirriego, mejorando la estabilidad y eficiencia de los biosistemas.
+                </p>
               </div>
-              <p class="mt-4 text-sm leading-7 text-biosys-soft">
-                Instrumentación de procesos, validación de rutinas y desarrollo de sistemas para ensayos repetibles y confiables.
-              </p>
             </article>
-            <article class="card-lift panel focus-ring p-6">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="font-title text-xl font-bold text-biosys-text">Fenotipado digital</h3>
-                <span class="chip-motion rounded-full bg-biosys-primaryTint px-3 py-1 text-xs font-semibold text-biosys-primary">Imágenes</span>
+
+            <article class="card-lift panel focus-ring p-6 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Área de investigación 03</p>
+                <h3 class="mt-3 font-title text-xl font-bold text-biosys-text">Instrumentación</h3>
+                <p class="mt-3 text-sm leading-7 text-biosys-soft">
+                  Integración de sensores, dispositivos y arquitecturas de adquisición de datos para el monitoreo confiable de variables en tiempo real.
+                </p>
               </div>
-              <p class="mt-4 text-sm leading-7 text-biosys-soft">
-                Procesamiento visual para estudiar crecimiento, respuesta fisiológica y estado de sistemas vegetales con lectura no invasiva.
-              </p>
             </article>
-            <article class="card-lift panel focus-ring p-6">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="font-title text-xl font-bold text-biosys-text">Sostenibilidad operativa</h3>
-                <span class="chip-motion rounded-full bg-biosys-primaryTint px-3 py-1 text-xs font-semibold text-biosys-primary">Impacto</span>
+
+            <article class="card-lift panel focus-ring p-6 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Área de investigación 04</p>
+                <h3 class="mt-3 font-title text-xl font-bold text-biosys-text">Robótica agrícola</h3>
+                <p class="mt-3 text-sm leading-7 text-biosys-soft">
+                  Desarrollo y validación de sistemas mecatrónicos y plataformas de automatización para la ejecución de tareas en entornos experimentales.
+                </p>
               </div>
-              <p class="mt-4 text-sm leading-7 text-biosys-soft">
-                Evaluación de estrategias para optimizar recursos, mejorar trazabilidad y fortalecer la toma de decisiones basada en evidencia.
-              </p>
             </article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="px-4 py-2 sm:px-6 lg:px-8">
-      <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:gap-16">
-        <div class="panel image-lift overflow-hidden rounded-[16px] border border-biosys-border">
-          <img
-            src="./assets/InvernaderoPlatica.jpeg"
-            alt="Investigación en biosistemas con monitoreo vegetal, robótica y análisis en invernadero o campo"
-            class="h-full min-h-[320px] w-full object-cover object-center"
-          />
-        </div>
-        <div class="flex items-center">
-          <div class="max-w-2xl">
-            <span class="eyebrow">Automatización sostenible</span>
-            <h2 class="balance mt-6 font-title text-3xl font-extrabold tracking-[-0.03em] text-biosys-text sm:text-4xl">
-              Biosistemas medibles
+    <!-- SECCIÓN: EQUIPO DE INVESTIGACIÓN -->
+    <section id="equipo" class="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 border-t border-biosys-border/60">
+      <div class="mx-auto max-w-7xl">
+        <!-- Encabezado de la Sección -->
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-3xl">
+            <span class="eyebrow">Comunidad y Talento</span>
+            <h2 class="balance mt-4 font-title text-3xl font-extrabold tracking-[-0.03em] text-biosys-text sm:text-4xl">
+              Equipo de Investigación
             </h2>
-            <p class="mt-5 text-base leading-7 text-biosys-soft sm:text-lg sm:leading-8">
-              Entendemos la automatización como una herramienta para observar mejor, intervenir con criterio y generar conocimiento útil para sistemas biológicos complejos.
+            <p class="mt-4 text-base leading-7 text-biosys-soft sm:text-lg">
+              Conoce a las investigadoras, investigadores y estudiantes que dan vida a los proyectos científicos y tecnológicos del Laboratorio de Modelación y Automatización de Biosistemas en la Universidad Autónoma Chapingo.
             </p>
-            <div class="mt-8 grid gap-4 sm:grid-cols-2">
-              <div class="rounded-2xl border border-biosys-border bg-biosys-surface p-5">
-                <p class="font-title text-lg font-bold text-biosys-text">Sensado continuo</p>
-                <p class="mt-2 text-sm leading-6 text-biosys-soft">Captura de señales relevantes para caracterizar ambiente, crecimiento y desempeño operativo.</p>
-              </div>
-              <div class="rounded-2xl border border-biosys-border bg-biosys-surface p-5">
-                <p class="font-title text-lg font-bold text-biosys-text">Modelos útiles</p>
-                <p class="mt-2 text-sm leading-6 text-biosys-soft">Lectura analítica orientada a interpretación, comparación de escenarios y soporte experimental.</p>
+          </div>
+          <div class="shrink-0">
+            <span class="inline-flex items-center gap-2 rounded-full border border-biosys-border bg-biosys-surface px-4 py-2 text-xs font-semibold text-biosys-soft">
+              <i data-lucide="users" class="h-4 w-4 text-biosys-primary"></i>
+              Comunidad LMAB · UACh
+            </span>
+          </div>
+        </div>
+
+        <!-- Banner del equipo en campo -->
+        <div class="mt-10 overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface shadow-soft">
+          <div class="grid gap-0 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] items-center">
+            <div class="h-72 sm:h-80 lg:h-96 w-full overflow-hidden">
+              <img
+                src="./assets/InvernaderoPlatica.jpeg"
+                alt="Equipo del LMAB dialogando en el invernadero experimental"
+                class="h-full w-full object-cover object-center image-lift"
+              />
+            </div>
+            <div class="p-6 sm:p-8 lg:p-10">
+              <span class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Colaboración Activa</span>
+              <h3 class="mt-2 font-title text-2xl font-bold text-biosys-text">Formación e Investigación Aplicada</h3>
+              <p class="mt-3 text-sm leading-6 text-biosys-soft">
+                Promovemos un entorno donde estudiantes de licenciatura y posgrado interactúan directamente con los investigadores titulares en el diseño, instrumentación y control de biosistemas reales.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2 text-xs">
+                <span class="rounded-full bg-biosys-primary/10 px-3 py-1 font-semibold text-biosys-primary">Trabajo Interdisciplinario</span>
+                <span class="rounded-full bg-biosys-primary/10 px-3 py-1 font-semibold text-biosys-primary">Validación Experimental</span>
+                <span class="rounded-full bg-biosys-primary/10 px-3 py-1 font-semibold text-biosys-primary">Tesis de Alto Nivel</span>
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- 1. Líder o Titular del Laboratorio -->
+        <div class="mt-16">
+          <div class="border-b border-biosys-border pb-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-biosys-primary/10 text-biosys-primary">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <h3 class="font-title text-xl font-bold text-biosys-text">Líder y Titular del Laboratorio</h3>
+                <p class="text-xs text-biosys-soft">Dirección científica y coordinación de proyectos</p>
+              </div>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary hidden sm:inline-block">Coordinación</span>
+          </div>
+
+          <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-2 max-w-4xl">
+            <!-- Tarjeta 1: Dr. Efrén Fitz Rodríguez -->
+            <div class="panel card-lift overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface flex flex-col sm:flex-row">
+              <div class="h-56 sm:h-auto sm:w-48 shrink-0 bg-biosys-primary/10 flex items-center justify-center relative border-b sm:border-b-0 sm:border-r border-biosys-border">
+                <div class="flex flex-col items-center justify-center p-4 text-center">
+                  <span class="flex h-20 w-20 items-center justify-center rounded-2xl bg-biosys-primary text-white shadow-soft">
+                    <i data-lucide="user-check" class="h-10 w-10"></i>
+                  </span>
+                  <span class="mt-3 text-[11px] font-bold uppercase tracking-wider text-biosys-primary">Titular LMAB</span>
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h4 class="font-title text-lg font-bold text-biosys-text">
+                    Dr. Efrén Fitz-Rodríguez
+                  </h4>
+                  <p class="text-xs font-semibold text-biosys-primary mt-0.5">
+                    Profesor Investigador Titular · Responsable del Laboratorio
+                  </p>
+                  <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                    Especialista en modelación matemática, control climático en ambientes protegidos, dinámica de fluidos computacional (CFD) y sustentabilidad energética.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-biosys-border/70 flex items-center justify-between text-xs text-biosys-soft">
+                  <span class="flex items-center gap-1 font-medium">
+                    <i data-lucide="building" class="h-3.5 w-3.5 text-biosys-primary"></i>
+                    Posgrado / IAUIA
+                  </span>
+                  <span class="font-semibold text-biosys-primary">UACh</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tarjeta 2: Dr. Irineo López Cruz -->
+            <div class="panel card-lift overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface flex flex-col sm:flex-row">
+              <div class="h-56 sm:h-auto sm:w-48 shrink-0 bg-biosys-primary/10 flex items-center justify-center relative border-b sm:border-b-0 sm:border-r border-biosys-border">
+                <div class="flex flex-col items-center justify-center p-4 text-center">
+                  <span class="flex h-20 w-20 items-center justify-center rounded-2xl bg-biosys-primary text-white shadow-soft">
+                    <i data-lucide="user-check" class="h-10 w-10"></i>
+                  </span>
+                  <span class="mt-3 text-[11px] font-bold uppercase tracking-wider text-biosys-primary">Co-Líder Científico</span>
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h4 class="font-title text-lg font-bold text-biosys-text">
+                    Dr. Irineo López Cruz
+                  </h4>
+                  <p class="text-xs font-semibold text-biosys-primary mt-0.5">
+                    Profesor Investigador · Posgrado en Ingeniería Agrícola
+                  </p>
+                  <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                    Especialista en algoritmos evolutivos y bioinspirados, control óptimo y predictivo basado en modelos (MPC), optimización matemática, y modelación matematica.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-biosys-border/70 flex items-center justify-between text-xs text-biosys-soft">
+                  <span class="flex items-center gap-1 font-medium">
+                    <i data-lucide="building" class="h-3.5 w-3.5 text-biosys-primary"></i>
+                    Posgrado IAUIA
+                  </span>
+                  <span class="font-semibold text-biosys-primary">UACh</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Investigadores Colaboradores -->
+        <div class="mt-16">
+          <div class="border-b border-biosys-border pb-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-biosys-primary/10 text-biosys-primary">
+                <i data-lucide="handshake" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <h3 class="font-title text-xl font-bold text-biosys-text">Investigadores Colaboradores</h3>
+                <p class="text-xs text-biosys-soft">Red interinstitucional y especialistas asociados</p>
+              </div>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary hidden sm:inline-block">Colaboradores</span>
+          </div>
+
+          <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <!-- 1. Dra. Raquel Salazar Moreno -->
+            <div class="panel card-lift overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface text-center flex flex-col justify-between p-6">
+              <div>
+                <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-biosys-primary/10 text-biosys-primary shadow-xs">
+                  <i data-lucide="user" class="h-10 w-10"></i>
+                </div>
+                <h4 class="mt-4 font-title text-base font-bold text-biosys-text">
+                  Dra. Raquel Salazar Moreno
+                </h4>
+                <p class="text-xs font-semibold text-biosys-primary mt-1">
+                  Investigadora Colaboradora
+                </p>
+                <p class="mt-2 text-xs leading-5 text-biosys-soft">
+                  Producción en agricultura protegida, fisiología vegetal, sistemas acuapónicos y calidad de cosecha.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-biosys-border/70 text-xs text-biosys-soft">
+                Universidad Autónoma Chapingo
+              </div>
+            </div>
+
+            <!-- 2. Dr. Abraham Rojano Aguilar -->
+            <div class="panel card-lift overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface text-center flex flex-col justify-between p-6">
+              <div>
+                <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-biosys-primary/10 text-biosys-primary shadow-xs">
+                  <i data-lucide="user" class="h-10 w-10"></i>
+                </div>
+                <h4 class="mt-4 font-title text-base font-bold text-biosys-text">
+                  Dr. Abraham Rojano Aguilar
+                </h4>
+                <p class="text-xs font-semibold text-biosys-primary mt-1">
+                  Investigador Colaborador
+                </p>
+                <p class="mt-2 text-xs leading-5 text-biosys-soft">
+                  Física ambiental, agrometeorología, redes neuronales y dinámica de fluidos en ambientes protegidos.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-biosys-border/70 text-xs text-biosys-soft">
+                Universidad Autónoma Chapingo
+              </div>
+            </div>
+
+            <!-- 3. Dr. José Armando Ramírez Arias -->
+            <div class="panel card-lift overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface text-center flex flex-col justify-between p-6">
+              <div>
+                <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-biosys-primary/10 text-biosys-primary shadow-xs">
+                  <i data-lucide="user" class="h-10 w-10"></i>
+                </div>
+                <h4 class="mt-4 font-title text-base font-bold text-biosys-text">
+                  Dr. José Armando Ramírez Arias
+                </h4>
+                <p class="text-xs font-semibold text-biosys-primary mt-1">
+                  Investigador Colaborador
+                </p>
+                <p class="mt-2 text-xs leading-5 text-biosys-soft">
+                  Modelado de cultivos, diseño de invernaderos, ambiente protegido y optimización energética en biosistemas.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-biosys-border/70 text-xs text-biosys-soft">
+                Depto. de Ingeniería Mecánica Agrícola · UACh
+              </div>
+            </div>
+
+            <!-- 4. Dr. Agustín Ruiz García -->
+            <div class="panel card-lift overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface text-center flex flex-col justify-between p-6">
+              <div>
+                <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-biosys-primary/10 text-biosys-primary shadow-xs">
+                  <i data-lucide="user" class="h-10 w-10"></i>
+                </div>
+                <h4 class="mt-4 font-title text-base font-bold text-biosys-text">
+                  Dr. Agustín Ruiz García
+                </h4>
+                <p class="text-xs font-semibold text-biosys-primary mt-1">
+                  Investigador Colaborador
+                </p>
+                <p class="mt-2 text-xs leading-5 text-biosys-soft">
+                  Instrumentación electrónica, redes de sensores inalámbricas, telemetría y sistemas embebidos.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-biosys-border/70 text-xs text-biosys-soft">
+                Universidad Autónoma Chapingo
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Estudiantes de Posgrado -->
+        <div class="mt-16">
+          <div class="border-b border-biosys-border pb-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-100 text-purple-800">
+                <i data-lucide="graduation-cap" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <h3 class="font-title text-xl font-bold text-biosys-text">Estudiantes de Posgrado</h3>
+                <p class="text-xs text-biosys-soft">Investigación en Doctorado y Maestría en Ciencias</p>
+              </div>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-purple-800 hidden sm:inline-block">Doctorado & Maestría</span>
+          </div>
+
+          <div class="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3 max-w-5xl">
+            <!-- Posgrado 1: M.C. José Eduardo Rosales Vicelis -->
+            <div class="panel card-lift overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="rounded-full bg-purple-100 px-3 py-0.5 text-xs font-bold text-purple-900 border border-purple-200">
+                    Posgrado
+                  </span>
+                  <span class="text-xs text-biosys-primary font-semibold">IAUIA</span>
+                </div>
+                <h4 class="mt-4 font-title text-base font-bold text-biosys-text">
+                  M.C. José Eduardo Rosales Vicelis
+                </h4>
+                <p class="text-xs font-semibold text-biosys-primary mt-1">
+                  Línea: Dinámica CFD y Simulación Microclimática
+                </p>
+                <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                  Monitoreo 3D y análisis de dinámica de fluidos computacional (CFD) del ambiente de invernaderos bajo ventilación natural.
+                </p>
+              </div>
+              <div class="mt-5 pt-3 border-t border-biosys-border/70 text-xs text-biosys-soft flex items-center justify-between">
+                <span>Posgrado IAUIA</span>
+                <span class="font-semibold text-purple-900">UACh</span>
+              </div>
+            </div>
+
+            <!-- Posgrado 2: Ing. Jorge Antonio Peña Chavez -->
+            <div class="panel card-lift overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="rounded-full bg-purple-100 px-3 py-0.5 text-xs font-bold text-purple-900 border border-purple-200">
+                    Posgrado
+                  </span>
+                  <span class="text-xs text-biosys-primary font-semibold">IAUIA</span>
+                </div>
+                <h4 class="mt-4 font-title text-base font-bold text-biosys-text">
+                  Ing. Jorge Antonio Peña Chavez
+                </h4>
+                <p class="text-xs font-semibold text-biosys-primary mt-1">
+                  Línea: Modelación Matemática y Control en Biosistemas
+                </p>
+                <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                  Diseño de leyes de control predictivo, optimización de recursos y modelación dinámica de variables agroclimáticas.
+                </p>
+              </div>
+              <div class="mt-5 pt-3 border-t border-biosys-border/70 text-xs text-biosys-soft flex items-center justify-between">
+                <span>Posgrado IAUIA</span>
+                <span class="font-semibold text-purple-900">UACh</span>
+              </div>
+            </div>
+
+            <!-- Posgrado 3: Ing. Luis Javier Luis Luis -->
+            <div class="panel card-lift overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="rounded-full bg-purple-100 px-3 py-0.5 text-xs font-bold text-purple-900 border border-purple-200">
+                    Posgrado
+                  </span>
+                  <span class="text-xs text-biosys-primary font-semibold">IAUIA</span>
+                </div>
+                <h4 class="mt-4 font-title text-base font-bold text-biosys-text">
+                  Ing. Luis Javier Luis Luis
+                </h4>
+                <p class="text-xs font-semibold text-biosys-primary mt-1">
+                  Línea: Instrumentación y Redes de Adquisición de Datos
+                </p>
+                <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                  Integración de redes de sensores, hardware embebido y monitoreo continuo multivariable en tiempo real.
+                </p>
+              </div>
+              <div class="mt-5 pt-3 border-t border-biosys-border/70 text-xs text-biosys-soft flex items-center justify-between">
+                <span>Posgrado IAUIA</span>
+                <span class="font-semibold text-purple-900">UACh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Estudiantes de Licenciatura -->
+        <div class="mt-16">
+          <div class="border-b border-biosys-border pb-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-100 text-blue-800">
+                <i data-lucide="book-open" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <h3 class="font-title text-xl font-bold text-biosys-text">Estudiantes de Licenciatura</h3>
+                <p class="text-xs text-biosys-soft">Tesistas y residentes en formación en Ingeniería Mecánica Agrícola</p>
+              </div>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-blue-800 hidden sm:inline-block">Licenciatura</span>
+          </div>
+
+          <div class="mt-8 grid gap-6 sm:grid-cols-2 max-w-2xl">
+            <!-- Licenciatura 1: AGUILAR MARTELL JORGE -->
+            <div class="panel card-lift overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="rounded-full bg-blue-100 px-3 py-0.5 text-xs font-bold text-blue-900 border border-blue-200">
+                    Licenciatura
+                  </span>
+                  <span class="text-xs text-biosys-primary font-semibold">Tesista</span>
+                </div>
+                <h4 class="mt-4 font-title text-base font-bold text-biosys-text">
+                  Jorge Aguilar Martell
+                </h4>
+                <p class="text-xs font-semibold text-biosys-primary mt-1">
+                  Ingeniería Mecánica Agrícola · UACh
+                </p>
+                <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                  Desarrollo de proyectos de automatización, mecatrónica agrícola y pruebas experimentales en ambientes protegidos.
+                </p>
+              </div>
+              <div class="mt-5 pt-3 border-t border-biosys-border/70 text-xs text-biosys-soft flex items-center justify-between">
+                <span>Depto. Mecánica Agrícola</span>
+                <span class="font-semibold text-blue-900">UACh</span>
+              </div>
+            </div>
+
+            <!-- Licenciatura 2: DELÍN CEME RAÚL -->
+            <div class="panel card-lift overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="rounded-full bg-blue-100 px-3 py-0.5 text-xs font-bold text-blue-900 border border-blue-200">
+                    Licenciatura
+                  </span>
+                  <span class="text-xs text-biosys-primary font-semibold">Tesista</span>
+                </div>
+                <h4 class="mt-4 font-title text-base font-bold text-biosys-text">
+                  Raúl Delín Ceme
+                </h4>
+                <p class="text-xs font-semibold text-biosys-primary mt-1">
+                  Ingeniería Mecánica Agrícola · UACh
+                </p>
+                <p class="mt-3 text-xs leading-5 text-biosys-soft">
+                  Instrumentación, diseño de prototipos mecatrónicos y sensado de variables agroclimáticas en invernadero.
+                </p>
+              </div>
+              <div class="mt-5 pt-3 border-t border-biosys-border/70 text-xs text-biosys-soft flex items-center justify-between">
+                <span>Depto. Mecánica Agrícola</span>
+                <span class="font-semibold text-blue-900">UACh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Estudiantes Pasados / Egresados (Alumni) -->
+        <div class="mt-16">
+          <div class="border-b border-biosys-border pb-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-biosys-primary/10 text-biosys-primary">
+                <i data-lucide="history" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <h3 class="font-title text-xl font-bold text-biosys-text">Estudiantes Pasados y Egresados (Alumni)</h3>
+                <p class="text-xs text-biosys-soft">Investigadores y profesionales formados en el LMAB que concluyeron exitosamente sus tesis</p>
+              </div>
+            </div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary hidden sm:inline-block">Alumni</span>
+          </div>
+
+          <div class="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <!-- Doctorado / Maestría Pasados -->
+            <div class="rounded-xl border border-biosys-border bg-biosys-surface p-4 text-center card-lift">
+              <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-purple-100 text-purple-800">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </div>
+              <h5 class="mt-3 font-title text-sm font-bold text-biosys-text">Dr. José Orbelin Gutiérrez Hernández</h5>
+              <p class="text-[11px] text-purple-900 font-semibold">Doctorado · 2020</p>
+              <p class="mt-1 text-[11px] text-biosys-soft">Control de DPV en invernadero con nebulización</p>
+            </div>
+
+            <div class="rounded-xl border border-biosys-border bg-biosys-surface p-4 text-center card-lift">
+              <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-purple-100 text-purple-800">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </div>
+              <h5 class="mt-3 font-title text-sm font-bold text-biosys-text">Dr. Israel Gaytán Campos</h5>
+              <p class="text-[11px] text-purple-900 font-semibold">Doctorado · 2023</p>
+              <p class="mt-1 text-[11px] text-biosys-soft">Sistema inteligente para control mecánico de maleza</p>
+            </div>
+
+            <div class="rounded-xl border border-biosys-border bg-biosys-surface p-4 text-center card-lift">
+              <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-amber-100 text-amber-800">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </div>
+              <h5 class="mt-3 font-title text-sm font-bold text-biosys-text">M.C. Eleuterio González Jesús</h5>
+              <p class="text-[11px] text-amber-900 font-semibold">Maestría · 2024</p>
+              <p class="mt-1 text-[11px] text-biosys-soft">Visión artificial y deep learning para detección de fresas</p>
+            </div>
+
+            <div class="rounded-xl border border-biosys-border bg-biosys-surface p-4 text-center card-lift">
+              <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-amber-100 text-amber-800">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </div>
+              <h5 class="mt-3 font-title text-sm font-bold text-biosys-text">M.C. José Humberto López Díaz</h5>
+              <p class="text-[11px] text-amber-900 font-semibold">Maestría · 2018</p>
+              <p class="mt-1 text-[11px] text-biosys-soft">Sistema de calefacción solar para invernaderos sustentables</p>
+            </div>
+
+            <!-- Licenciatura Pasados -->
+            <div class="rounded-xl border border-biosys-border bg-biosys-surface p-4 text-center card-lift">
+              <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-blue-100 text-blue-800">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </div>
+              <h5 class="mt-3 font-title text-sm font-bold text-biosys-text">Ing. Citlali Melchor Ramírez</h5>
+              <p class="text-[11px] text-blue-900 font-semibold">Licenciatura · 2018</p>
+              <p class="mt-1 text-[11px] text-biosys-soft">Cámara de crecimiento vegetal de arquitectura abierta</p>
+            </div>
+
+            <div class="rounded-xl border border-biosys-border bg-biosys-surface p-4 text-center card-lift">
+              <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-blue-100 text-blue-800">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </div>
+              <h5 class="mt-3 font-title text-sm font-bold text-biosys-text">Ing. Regina Marín Cabrera</h5>
+              <p class="text-[11px] text-blue-900 font-semibold">Licenciatura · 2018</p>
+              <p class="mt-1 text-[11px] text-biosys-soft">Dimensionamiento térmico de calefacción solar</p>
+            </div>
+
+            <div class="rounded-xl border border-biosys-border bg-biosys-surface p-4 text-center card-lift">
+              <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-blue-100 text-blue-800">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </div>
+              <h5 class="mt-3 font-title text-sm font-bold text-biosys-text">Ing. Walver Adolfo López Díaz</h5>
+              <p class="text-[11px] text-blue-900 font-semibold">Licenciatura · 2018</p>
+              <p class="mt-1 text-[11px] text-biosys-soft">Análisis CFD de invernadero asimétrico con pared húmeda</p>
+            </div>
+
+            <div class="rounded-xl border border-biosys-border bg-biosys-surface p-4 text-center card-lift">
+              <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-blue-100 text-blue-800">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </div>
+              <h5 class="mt-3 font-title text-sm font-bold text-biosys-text">Ing. Ángel Jesús Aguilar Márquez</h5>
+              <p class="text-[11px] text-blue-900 font-semibold">Licenciatura · 2018</p>
+              <p class="mt-1 text-[11px] text-biosys-soft">Análisis CFD de microclima nocturno en invernadero tipo chino</p>
+            </div>
+
+            <div class="rounded-xl border border-biosys-border bg-biosys-surface p-4 text-center card-lift">
+              <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-blue-100 text-blue-800">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </div>
+              <h5 class="mt-3 font-title text-sm font-bold text-biosys-text">Ing. Aldo Ordoñes Mendoza</h5>
+              <p class="text-[11px] text-blue-900 font-semibold">Licenciatura · 2017</p>
+              <p class="mt-1 text-[11px] text-biosys-soft">Diseño e instrumentación de digestor para metano</p>
+            </div>
+
+            <div class="rounded-xl border border-biosys-border bg-biosys-surface p-4 text-center card-lift">
+              <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-blue-100 text-blue-800">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </div>
+              <h5 class="mt-3 font-title text-sm font-bold text-biosys-text">Ing. Eric Rafael Suárez Gaona</h5>
+              <p class="text-[11px] text-blue-900 font-semibold">Licenciatura · 2016</p>
+              <p class="mt-1 text-[11px] text-biosys-soft">Diseño de cabezal cosechador para higuerilla</p>
+            </div>
+
+            <div class="rounded-xl border border-biosys-border bg-biosys-surface p-4 text-center card-lift">
+              <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-blue-100 text-blue-800">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </div>
+              <h5 class="mt-3 font-title text-sm font-bold text-biosys-text">Ing. Carlos Alberto Morales</h5>
+              <p class="text-[11px] text-blue-900 font-semibold">Licenciatura · 2016</p>
+              <p class="mt-1 text-[11px] text-biosys-soft">Monitoreo continuo de DPV en invernadero</p>
+            </div>
+
+            <div class="rounded-xl border border-biosys-border bg-biosys-surface p-4 text-center card-lift">
+              <div class="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-blue-100 text-blue-800">
+                <i data-lucide="award" class="h-5 w-5"></i>
+              </div>
+              <h5 class="mt-3 font-title text-sm font-bold text-biosys-text">Ing. Diana Laura Domínguez</h5>
+              <p class="text-[11px] text-blue-900 font-semibold">Licenciatura · 2015</p>
+              <p class="mt-1 text-[11px] text-biosys-soft">Control y optimización de fertirriego</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Convocatoria para unirse al equipo -->
+        <div class="mt-14 rounded-2xl border border-biosys-border bg-biosys-surface p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
+          <div class="max-w-2xl">
+            <span class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Únete a Nuestro Equipo</span>
+            <h4 class="mt-1 font-title text-xl font-bold text-biosys-text">¿Interesado en realizar tesis, posgrado o estancia de investigación?</h4>
+            <p class="mt-2 text-sm leading-6 text-biosys-soft">
+              Continuamente abrimos espacios para tesistas de licenciatura, estudiantes de maestría y doctorado, así como estancias académicas en automatización y modelación de biosistemas.
+            </p>
+          </div>
+          <a
+            href="./contacto.html"
+            class="button-motion cta-link focus-ring inline-flex min-h-[44px] shrink-0 items-center gap-2 rounded-full bg-biosys-primary px-6 py-3 text-sm font-semibold text-[var(--biosys-color-surface)]"
+          >
+            Postular o consultar vacantes
+            <span class="cta-arrow" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </section>
@@ -213,5 +737,13 @@
     </div>
   </footer>
 
+  <!-- Script para Lucide Icons -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    });
+  </script>
 </body>
 </html>
