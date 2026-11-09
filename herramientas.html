@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas | Laboratorio de Modelación y Automatización de Biosistemas</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-background: var(--biosys-color-bg);
+    --color-foreground: var(--biosys-color-text);
+    --color-surface: var(--biosys-color-surface);
+    --color-muted: var(--biosys-color-surface-muted);
+    --color-border: var(--biosys-color-border);
+    --color-biosys-primary: var(--biosys-color-primary-500);
+    --color-biosys-text: var(--biosys-color-text);
+    --color-biosys-soft: var(--biosys-color-text-soft);
+    --color-biosys-surface: var(--biosys-color-surface);
+    --color-primary: var(--biosys-color-primary-500);
+    --color-primary-deep: var(--biosys-color-primary-700);
+    --color-primary-soft: var(--biosys-color-primary-50);
+    --color-primary-tint: var(--biosys-color-primary-100);
+    --font-title: var(--biosys-font-title);
+    --font-body: var(--biosys-font-body);
+    --radius-sm: var(--biosys-radius-sm);
+    --radius-md: var(--biosys-radius-md);
+    --radius-lg: var(--biosys-radius-lg);
+  }
+
+  @layer base {
+    body { background: var(--biosys-background); color: var(--biosys-foreground); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+</head>
+<body class="font-body text-biosys-text antialiased">
+  <!-- Header / Barra de Navegación -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-biosys-border/80 bg-[rgba(247,244,238,0.9)] backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
+      <a href="./inicio.html" class="focus-ring inline-flex min-w-0 items-center gap-4 sm:gap-6">
+        <span class="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-biosys-border bg-biosys-surface p-2 sm:h-28 sm:w-28">
+          <img
+            src="./assets/Logo.jpeg"
+            alt="Logo del Laboratorio de Modelación y Automatización de Biosistemas"
+            class="h-full w-full object-contain"
+          />
+        </span>
+        <span class="flex min-w-0 flex-col">
+          <span class="font-title text-sm font-extrabold uppercase tracking-[0.18em] text-biosys-primary sm:text-lg">LMAB</span>
+          <span class="font-title text-sm font-semibold leading-tight text-biosys-text sm:text-2xl">Laboratorio de Modelación y Automatización de Biosistemas</span>
+        </span>
+      </a>
+      <nav aria-label="Navegación principal" class="hidden items-center gap-6 text-sm font-medium text-biosys-soft md:flex">
+        <a class="nav-link focus-ring" href="./inicio.html">Inicio</a>
+        <a class="nav-link focus-ring" href="./investigacion.html">Investigación</a>
+        <a class="nav-link focus-ring" href="./infraestructura.html">Infraestructura</a>
+        <a class="nav-link focus-ring" href="./proyectos.html">Proyectos</a>
+        <a class="nav-link active focus-ring" href="./herramientas.html">Herramientas</a>
+        <a class="nav-link focus-ring" href="./contacto.html">Contacto</a>
+      </nav>
+      <a
+        href="./contacto.html"
+        class="button-motion focus-ring hidden rounded-full bg-biosys-primary px-5 py-3 text-sm font-semibold text-[var(--biosys-color-surface)] md:inline-flex"
+      >
+        Colaborar
+      </a>
+    </div>
+  </header>
+
+  <main class="overflow-hidden pt-28 sm:pt-32">
+    <!-- Hero Section -->
+    <section class="section-shell hero-grid relative px-4 pb-12 pt-8 sm:px-6 md:pb-16 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <span class="eyebrow">Modelación Computacional Aplicada</span>
+          <h1 class="balance mt-4 font-title text-3xl font-extrabold tracking-[-0.03em] text-biosys-text sm:text-4xl lg:text-5xl">
+            Herramientas Termodinámicas y Agroclimáticas
+          </h1>
+          <p class="mt-4 text-base leading-7 text-biosys-soft sm:text-lg sm:leading-8">
+            Instrumentos interactivos basados en modelos matemáticos para el cálculo de propiedades termodinámicas del aire húmedo, análisis del microclima y diagnóstico del Déficit de Presión de Vapor (DPV) en invernaderos y biosistemas protegidos.
+          </p>
+        </div>
+
+        <!-- Barra de Presión Atmosférica / Altitud (Chapingo vs Nivel del Mar) -->
+        <div class="mt-8 rounded-2xl border border-biosys-border bg-biosys-surface p-4 sm:p-5 shadow-soft">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div class="flex items-center gap-3">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-biosys-primary/10 text-biosys-primary">
+                <i data-lucide="gauge" class="h-5 w-5"></i>
+              </span>
+              <div>
+                <p class="font-title text-sm font-bold text-biosys-text">Presión Atmosférica de Referencia</p>
+                <p class="text-xs text-biosys-soft">Afecta directamente la entalpía, densidad y razón de humedad</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2">
+              <button
+                type="button"
+                id="btnPresetChapingo"
+                class="rounded-full border border-biosys-primary bg-biosys-primary px-4 py-1.5 text-xs font-semibold text-white transition-all shadow-xs"
+              >
+                Texcoco · Chapingo (2,250 msnm · 77.8 kPa)
+              </button>
+              <button
+                type="button"
+                id="btnPresetSeaLevel"
+                class="rounded-full border border-biosys-border bg-biosys-surface px-4 py-1.5 text-xs font-semibold text-biosys-text hover:border-biosys-primary hover:text-biosys-primary transition-all"
+              >
+                Nivel del Mar (0 msnm · 101.325 kPa)
+              </button>
+              <div class="flex items-center gap-1.5 pl-2">
+                <label for="inputPatm" class="text-xs font-medium text-biosys-soft">P:</label>
+                <input
+                  type="number"
+                  id="inputPatm"
+                  value="77.8"
+                  step="0.1"
+                  min="50"
+                  max="110"
+                  class="w-20 rounded-lg border border-biosys-border bg-biosys-surface px-2.5 py-1 text-xs font-bold text-biosys-text text-center focus:border-biosys-primary focus:outline-none"
+                />
+                <span class="text-xs text-biosys-soft">kPa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enlaces Rápidos de Sección -->
+        <div class="mt-6 flex flex-wrap gap-2 sm:gap-3">
+          <a
+            href="#calculadora"
+            class="button-motion focus-ring inline-flex items-center gap-2 rounded-full border border-biosys-border bg-biosys-surface px-4 py-2 text-xs font-semibold text-biosys-text sm:text-sm hover:border-biosys-primary hover:text-biosys-primary shadow-xs"
+          >
+            <i data-lucide="calculator" class="h-4 w-4 text-biosys-primary"></i>
+            Calculadora Psicrométrica
+          </a>
+          <a
+            href="#carta"
+            class="button-motion focus-ring inline-flex items-center gap-2 rounded-full border border-biosys-border bg-biosys-surface px-4 py-2 text-xs font-semibold text-biosys-text sm:text-sm hover:border-biosys-primary hover:text-biosys-primary shadow-xs"
+          >
+            <i data-lucide="line-chart" class="h-4 w-4 text-biosys-primary"></i>
+            Carta Psicrométrica Interactiva
+          </a>
+          <a
+            href="#dpv"
+            class="button-motion focus-ring inline-flex items-center gap-2 rounded-full border border-biosys-border bg-biosys-surface px-4 py-2 text-xs font-semibold text-biosys-text sm:text-sm hover:border-biosys-primary hover:text-biosys-primary shadow-xs"
+          >
+            <i data-lucide="droplets" class="h-4 w-4 text-biosys-primary"></i>
+            Calculadora de DPV (VPD)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERRAMIENTA 1: CALCULADORA PSICROMÉTRICA -->
+    <section id="calculadora" class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 border-t border-biosys-border/60">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+          <div>
+            <span class="eyebrow">Herramienta 01</span>
+            <h2 class="balance mt-2 font-title text-2xl font-bold tracking-[-0.02em] text-biosys-text sm:text-3xl">
+              Calculadora Psicrométrica de Precisión
+            </h2>
+            <p class="mt-2 text-sm text-biosys-soft max-w-2xl">
+              Calcula en tiempo real las 8 variables termodinámicas del aire a partir de la temperatura de bulbo seco y la humedad relativa ambiental.
+            </p>
+          </div>
+          <span class="rounded-full bg-biosys-primary/10 px-3 py-1 text-xs font-semibold text-biosys-primary">
+            Ecuaciones de Goff-Gratch & Tetens
+          </span>
+        </div>
+
+        <div class="mt-8 grid gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
+          <!-- Panel de Controles / Entradas -->
+          <div class="rounded-2xl border border-biosys-border bg-biosys-surface p-6 sm:p-8 shadow-soft flex flex-col justify-between">
+            <div>
+              <h3 class="font-title text-base font-bold text-biosys-text flex items-center gap-2 border-b border-biosys-border pb-3">
+                <i data-lucide="sliders" class="h-4 w-4 text-biosys-primary"></i>
+                Parámetros de Entrada
+              </h3>
+
+              <!-- Input: Temperatura de Bulbo Seco (Tbs) -->
+              <div class="mt-6">
+                <div class="flex items-center justify-between text-xs font-semibold">
+                  <label for="inputTbs" class="text-biosys-text flex items-center gap-1.5">
+                    <i data-lucide="thermometer" class="h-4 w-4 text-biosys-primary"></i>
+                    Temperatura Bulbo Seco (Tbs)
+                  </label>
+                  <span class="font-title text-base font-bold text-biosys-primary">
+                    <span id="dispTbs">24.0</span> °C
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  id="sliderTbs"
+                  min="-5"
+                  max="50"
+                  step="0.5"
+                  value="24"
+                  class="mt-2 w-full accent-biosys-primary cursor-pointer"
+                />
+                <div class="flex justify-between text-[10px] text-biosys-soft mt-1">
+                  <span>-5 °C</span>
+                  <span>10 °C</span>
+                  <span>25 °C</span>
+                  <span>40 °C</span>
+                  <span>50 °C</span>
+                </div>
+              </div>
+
+              <!-- Input: Humedad Relativa (HR) -->
+              <div class="mt-6">
+                <div class="flex items-center justify-between text-xs font-semibold">
+                  <label for="inputHr" class="text-biosys-text flex items-center gap-1.5">
+                    <i data-lucide="droplet" class="h-4 w-4 text-biosys-primary"></i>
+                    Humedad Relativa (HR)
+                  </label>
+                  <span class="font-title text-base font-bold text-biosys-primary">
+                    <span id="dispHr">65</span> %
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  id="sliderHr"
+                  min="5"
+                  max="100"
+                  step="1"
+                  value="65"
+                  class="mt-2 w-full accent-biosys-primary cursor-pointer"
+                />
+                <div class="flex justify-between text-[10px] text-biosys-soft mt-1">
+                  <span>5%</span>
+                  <span>25%</span>
+                  <span>50%</span>
+                  <span>75%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+
+              <!-- Presets rápidos agroclimáticos -->
+              <div class="mt-8 pt-4 border-t border-biosys-border/80">
+                <p class="text-xs font-semibold text-biosys-soft uppercase tracking-wider mb-2">Escenarios Típicos en Invernadero</p>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                  <button
+                    type="button"
+                    class="preset-btn rounded-xl border border-biosys-border p-2 text-left hover:border-biosys-primary hover:bg-biosys-surface-muted transition-all"
+                    data-tbs="18"
+                    data-hr="85"
+                  >
+                    <span class="font-bold text-biosys-text block">Mañana / Húmedo</span>
+                    <span class="text-biosys-soft text-[11px]">18 °C · 85% HR</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="preset-btn rounded-xl border border-biosys-border p-2 text-left hover:border-biosys-primary hover:bg-biosys-surface-muted transition-all"
+                    data-tbs="25"
+                    data-hr="60"
+                  >
+                    <span class="font-bold text-biosys-text block">Mediodía Óptimo</span>
+                    <span class="text-biosys-soft text-[11px]">25 °C · 60% HR</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="preset-btn rounded-xl border border-biosys-border p-2 text-left hover:border-biosys-primary hover:bg-biosys-surface-muted transition-all"
+                    data-tbs="32"
+                    data-hr="35"
+                  >
+                    <span class="font-bold text-biosys-text block">Tarde Cálida y Seca</span>
+                    <span class="text-biosys-soft text-[11px]">32 °C · 35% HR</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="preset-btn rounded-xl border border-biosys-border p-2 text-left hover:border-biosys-primary hover:bg-biosys-surface-muted transition-all"
+                    data-tbs="14"
+                    data-hr="95"
+                  >
+                    <span class="font-bold text-biosys-text block">Noche Fría / Rocío</span>
+                    <span class="text-biosys-soft text-[11px]">14 °C · 95% HR</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-xl bg-biosys-primary/10 p-3.5 text-xs text-biosys-soft">
+              <strong class="text-biosys-text">Sincronización automática:</strong> Los valores modificados actualizan de forma instantánea tanto la Carta Psicrométrica interactiva como el cálculo de DPV.
+            </div>
+          </div>
+
+          <!-- Matriz de Resultados Psicrométricos -->
+          <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+            <!-- Bulbo Húmedo -->
+            <div class="panel p-5 card-lift border border-biosys-border bg-biosys-surface rounded-2xl flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary">T. Bulbo Húmedo</span>
+                <p class="mt-2 font-title text-3xl font-extrabold text-biosys-text">
+                  <span id="outTbh">18.7</span> <span class="text-base font-normal text-biosys-soft">°C</span>
+                </p>
+              </div>
+              <p class="mt-3 text-[11px] leading-4 text-biosys-soft border-t border-biosys-border/70 pt-2">
+                Límite de enfriamiento evaporativo disponible en el invernadero.
+              </p>
+            </div>
+
+            <!-- Punto de Rocío -->
+            <div class="panel p-5 card-lift border border-biosys-border bg-biosys-surface rounded-2xl flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary">T. Punto de Rocío</span>
+                <p class="mt-2 font-title text-3xl font-extrabold text-biosys-text">
+                  <span id="outTpr">17.0</span> <span class="text-base font-normal text-biosys-soft">°C</span>
+                </p>
+              </div>
+              <p class="mt-3 text-[11px] leading-4 text-biosys-soft border-t border-biosys-border/70 pt-2">
+                Temperatura de inicio de condensación en cubierta y hojas.
+              </p>
+            </div>
+
+            <!-- Razón de Humedad -->
+            <div class="panel p-5 card-lift border border-biosys-border bg-biosys-surface rounded-2xl flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary">Razón de Humedad (W)</span>
+                <p class="mt-2 font-title text-3xl font-extrabold text-biosys-text">
+                  <span id="outW">16.0</span> <span class="text-base font-normal text-biosys-soft">g/kg</span>
+                </p>
+              </div>
+              <p class="mt-3 text-[11px] leading-4 text-biosys-soft border-t border-biosys-border/70 pt-2">
+                Masa de vapor por cada kilogramo de aire seco.
+              </p>
+            </div>
+
+            <!-- Entalpía Específica -->
+            <div class="panel p-5 card-lift border border-biosys-border bg-biosys-surface rounded-2xl flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary">Entalpía (h)</span>
+                <p class="mt-2 font-title text-3xl font-extrabold text-biosys-text">
+                  <span id="outH">65.1</span> <span class="text-base font-normal text-biosys-soft">kJ/kg</span>
+                </p>
+              </div>
+              <p class="mt-3 text-[11px] leading-4 text-biosys-soft border-t border-biosys-border/70 pt-2">
+                Energía térmica total del aire húmedo (sensible + latente).
+              </p>
+            </div>
+
+            <!-- Presión de Vapor Real -->
+            <div class="panel p-5 card-lift border border-biosys-border bg-biosys-surface rounded-2xl flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary">Presión Vapor (ea)</span>
+                <p class="mt-2 font-title text-3xl font-extrabold text-biosys-text">
+                  <span id="outEa">1.94</span> <span class="text-base font-normal text-biosys-soft">kPa</span>
+                </p>
+              </div>
+              <p class="mt-3 text-[11px] leading-4 text-biosys-soft border-t border-biosys-border/70 pt-2">
+                Presión parcial ejercida por las moléculas de vapor.
+              </p>
+            </div>
+
+            <!-- Presión de Saturación -->
+            <div class="panel p-5 card-lift border border-biosys-border bg-biosys-surface rounded-2xl flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary">Presión Saturación (es)</span>
+                <p class="mt-2 font-title text-3xl font-extrabold text-biosys-text">
+                  <span id="outEs">2.98</span> <span class="text-base font-normal text-biosys-soft">kPa</span>
+                </p>
+              </div>
+              <p class="mt-3 text-[11px] leading-4 text-biosys-soft border-t border-biosys-border/70 pt-2">
+                Máxima capacidad de retención de vapor a la temperatura actual.
+              </p>
+            </div>
+
+            <!-- Volumen Específico -->
+            <div class="panel p-5 card-lift border border-biosys-border bg-biosys-surface rounded-2xl flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary">Volumen Específico (v)</span>
+                <p class="mt-2 font-title text-3xl font-extrabold text-biosys-text">
+                  <span id="outV">1.12</span> <span class="text-base font-normal text-biosys-soft">m³/kg</span>
+                </p>
+              </div>
+              <p class="mt-3 text-[11px] leading-4 text-biosys-soft border-t border-biosys-border/70 pt-2">
+                Volumen ocupado por unidad de masa de aire seco.
+              </p>
+            </div>
+
+            <!-- Densidad del Aire -->
+            <div class="panel p-5 card-lift border border-biosys-border bg-biosys-surface rounded-2xl flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary">Densidad (ρ)</span>
+                <p class="mt-2 font-title text-3xl font-extrabold text-biosys-text">
+                  <span id="outRho">0.91</span> <span class="text-base font-normal text-biosys-soft">kg/m³</span>
+                </p>
+              </div>
+              <p class="mt-3 text-[11px] leading-4 text-biosys-soft border-t border-biosys-border/70 pt-2">
+                Densidad calculada con corrección barométrica por altitud.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERRAMIENTA 2: CARTA PSICROMÉTRICA INTERACTIVA -->
+    <section id="carta" class="section-shell bg-biosys-surface/50 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 border-t border-biosys-border/60">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+          <div>
+            <span class="eyebrow">Herramienta 02</span>
+            <h2 class="balance mt-2 font-title text-2xl font-bold tracking-[-0.02em] text-biosys-text sm:text-3xl">
+              Carta Psicrométrica Interactiva
+            </h2>
+            <p class="mt-2 text-sm text-biosys-soft max-w-2xl">
+              Visualización gráfica del estado termodinámico del aire. Mueve el cursor o haz clic sobre la carta para explorar diferentes condiciones microclimáticas.
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="flex items-center gap-1.5 text-xs text-biosys-soft">
+              <span class="h-3 w-3 rounded-full bg-biosys-primary inline-block"></span> Punto Actual
+            </span>
+            <span class="flex items-center gap-1.5 text-xs text-biosys-soft ml-3">
+              <span class="h-3 w-3 rounded-md bg-emerald-500/20 border border-emerald-500/40 inline-block"></span> Zona Confort Vegetal
+            </span>
+          </div>
+        </div>
+
+        <div class="mt-8 rounded-2xl border border-biosys-border bg-biosys-surface p-4 sm:p-6 shadow-soft">
+          <!-- Canvas Contenedor -->
+          <div class="relative w-full overflow-hidden rounded-xl border border-biosys-border/80 bg-white">
+            <canvas id="psychroChart" width="1000" height="580" class="w-full h-auto block cursor-crosshair"></canvas>
+            
+            <!-- Tooltip Flotante -->
+            <div id="chartTooltip" class="pointer-events-none absolute hidden rounded-lg border border-biosys-border bg-biosys-surface/95 px-3 py-2 text-xs shadow-float backdrop-blur-xs transition-opacity">
+              <p class="font-bold text-biosys-text" id="tipTitle">Estado</p>
+              <p class="text-biosys-soft" id="tipDesc">Tbs: 24 °C · W: 12 g/kg</p>
+            </div>
+          </div>
+
+          <!-- Leyenda y Métricas en Tiempo Real debajo de la carta -->
+          <div class="mt-4 flex flex-wrap items-center justify-between gap-4 border-t border-biosys-border/70 pt-4 text-xs text-biosys-soft">
+            <div class="flex flex-wrap items-center gap-4">
+              <span><strong>Eje X:</strong> Temperatura de bulbo seco (-5 °C a 50 °C)</span>
+              <span><strong>Eje Y:</strong> Razón de humedad W (0 a 30 g de vapor/kg aire seco)</span>
+              <span><strong>Curvas azules:</strong> Humedad Relativa (10% a 100% saturación)</span>
+            </div>
+            <button
+              type="button"
+              id="btnResetChart"
+              class="inline-flex items-center gap-1.5 font-semibold text-biosys-primary hover:underline"
+            >
+              <i data-lucide="rotate-ccw" class="h-3.5 w-3.5"></i>
+              Restablecer a valores óptimos (24 °C · 65% HR)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERRAMIENTA 3: CALCULADORA DE DPV (DÉFICIT DE PRESIÓN DE VAPOR) -->
+    <section id="dpv" class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 border-t border-biosys-border/60">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+          <div>
+            <span class="eyebrow">Herramienta 03 · Control Fisiológico</span>
+            <h2 class="balance mt-2 font-title text-2xl font-bold tracking-[-0.02em] text-biosys-text sm:text-3xl">
+              Calculadora de Déficit de Presión de Vapor (DPV / VPD)
+            </h2>
+            <p class="mt-2 text-sm text-biosys-soft max-w-2xl">
+              El DPV es la fuerza impulsora de la transpiración del cultivo. Evalúa el intercambio hídrico y previene problemas de absorción de calcio o enfermedades fungosas.
+            </p>
+          </div>
+          <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800 border border-emerald-200">
+            Diagnóstico Agronómico en Tiempo Real
+          </span>
+        </div>
+
+        <div class="mt-8 grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+          <!-- Entradas DPV -->
+          <div class="rounded-2xl border border-biosys-border bg-biosys-surface p-6 sm:p-8 shadow-soft flex flex-col justify-between">
+            <div>
+              <h3 class="font-title text-base font-bold text-biosys-text flex items-center gap-2 border-b border-biosys-border pb-3">
+                <i data-lucide="leaf" class="h-4 w-4 text-biosys-primary"></i>
+                Monitoreo Microclimático del Cultivo
+              </h3>
+
+              <!-- Temperatura del Aire -->
+              <div class="mt-5">
+                <div class="flex items-center justify-between text-xs font-semibold">
+                  <label for="dpvTair" class="text-biosys-text">Temperatura del Aire (T_aire)</label>
+                  <span class="font-bold text-biosys-primary"><span id="dispDpvTair">24.0</span> °C</span>
+                </div>
+                <input
+                  type="range"
+                  id="dpvSliderTair"
+                  min="10"
+                  max="45"
+                  step="0.5"
+                  value="24"
+                  class="mt-2 w-full accent-biosys-primary cursor-pointer"
+                />
+              </div>
+
+              <!-- Humedad Relativa -->
+              <div class="mt-5">
+                <div class="flex items-center justify-between text-xs font-semibold">
+                  <label for="dpvHr" class="text-biosys-text">Humedad Relativa del Aire (HR)</label>
+                  <span class="font-bold text-biosys-primary"><span id="dispDpvHr">65</span> %</span>
+                </div>
+                <input
+                  type="range"
+                  id="dpvSliderHr"
+                  min="15"
+                  max="95"
+                  step="1"
+                  value="65"
+                  class="mt-2 w-full accent-biosys-primary cursor-pointer"
+                />
+              </div>
+
+              <!-- Temperatura Foliar (Thoja) -->
+              <div class="mt-6 pt-5 border-t border-biosys-border/80">
+                <div class="flex items-center justify-between">
+                  <label class="text-xs font-bold text-biosys-text">Modo Temperatura de Hoja (T_hoja)</label>
+                  <div class="flex items-center gap-2 text-xs">
+                    <button
+                      type="button"
+                      id="btnLeafAuto"
+                      class="rounded-lg bg-biosys-primary px-2.5 py-1 text-white font-medium text-[11px]"
+                    >
+                      Estimada (T_aire - 2°C)
+                    </button>
+                    <button
+                      type="button"
+                      id="btnLeafManual"
+                      class="rounded-lg border border-biosys-border bg-biosys-surface px-2.5 py-1 text-biosys-text font-medium text-[11px] hover:border-biosys-primary"
+                    >
+                      Medición IR Manual
+                    </button>
+                  </div>
+                </div>
+
+                <div id="manualLeafWrapper" class="mt-4 hidden">
+                  <div class="flex items-center justify-between text-xs font-semibold">
+                    <span class="text-biosys-soft">Temperatura Medida de Hoja:</span>
+                    <span class="font-bold text-biosys-primary"><span id="dispDpvTleaf">22.0</span> °C</span>
+                  </div>
+                  <input
+                    type="range"
+                    id="dpvSliderTleaf"
+                    min="8"
+                    max="45"
+                    step="0.5"
+                    value="22"
+                    class="mt-2 w-full accent-biosys-primary cursor-pointer"
+                  />
+                </div>
+                <p class="mt-2 text-[11px] text-biosys-soft" id="leafStatusDesc">
+                  * La hoja transpira activamente, por lo que su temperatura suele estar entre 1°C y 3°C por debajo de la del aire en condiciones normales.
+                </p>
+              </div>
+            </div>
+
+            <!-- Fórmulas breves -->
+            <div class="mt-6 rounded-xl bg-biosys-surface-muted p-4 text-[11px] text-biosys-soft">
+              <strong class="text-biosys-text block mb-1">Ecuaciones de Referencia:</strong>
+              <p>• DPV_aire = es(T_aire) · (1 - HR/100)</p>
+              <p>• DPV_hoja = es(T_hoja) - ea(T_aire, HR)  [Fuerza impulsora estomática real]</p>
+            </div>
+          </div>
+
+          <!-- Diagnóstico y Tacómetro de DPV -->
+          <div class="rounded-2xl border border-biosys-border bg-biosys-surface p-6 sm:p-8 shadow-soft flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between border-b border-biosys-border pb-4">
+                <span class="text-xs font-semibold uppercase tracking-wider text-biosys-primary">Diagnóstico Fisiológico</span>
+                <span id="dpvBadge" class="rounded-full px-3 py-1 text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                  RANGO ÓPTIMO
+                </span>
+              </div>
+
+              <!-- Valores Numéricos Destacados -->
+              <div class="mt-6 grid grid-cols-2 gap-4">
+                <div class="rounded-xl border border-biosys-border/80 bg-biosys-surface-muted/50 p-4">
+                  <span class="text-xs font-semibold text-biosys-soft uppercase tracking-wider">DPV de Hoja (Real)</span>
+                  <p class="mt-1 font-title text-3xl font-extrabold text-biosys-text">
+                    <span id="valDpvLeaf">0.70</span> <span class="text-base font-normal text-biosys-soft">kPa</span>
+                  </p>
+                  <p class="text-[11px] text-biosys-soft mt-1">Determinante de transpiración</p>
+                </div>
+
+                <div class="rounded-xl border border-biosys-border/80 bg-biosys-surface-muted/50 p-4">
+                  <span class="text-xs font-semibold text-biosys-soft uppercase tracking-wider">DPV del Aire</span>
+                  <p class="mt-1 font-title text-3xl font-extrabold text-biosys-text">
+                    <span id="valDpvAir">1.04</span> <span class="text-base font-normal text-biosys-soft">kPa</span>
+                  </p>
+                  <p class="text-[11px] text-biosys-soft mt-1">Capacidad secante ambiental</p>
+                </div>
+              </div>
+
+              <!-- Barra / Tacómetro de Rangos -->
+              <div class="mt-8">
+                <div class="flex justify-between text-xs font-semibold text-biosys-text mb-1.5">
+                  <span>Escala de Estado (DPV Hoja)</span>
+                  <span id="dpvScaleIndicator" class="font-bold text-biosys-primary">0.70 kPa</span>
+                </div>
+                
+                <!-- Barra visual segmentada -->
+                <div class="relative h-4 w-full rounded-full overflow-hidden flex bg-gray-200">
+                  <div class="h-full w-[25%] bg-blue-400" title="Peligro: Muy Bajo (<0.4 kPa)"></div>
+                  <div class="h-full w-[25%] bg-teal-400" title="Bajo / Enraizamiento (0.4 - 0.8 kPa)"></div>
+                  <div class="h-full w-[25%] bg-emerald-500" title="Óptimo (0.8 - 1.2 kPa)"></div>
+                  <div class="h-full w-[15%] bg-amber-400" title="Moderado Alto (1.2 - 1.6 kPa)"></div>
+                  <div class="h-full w-[10%] bg-rose-500" title="Estrés Hídrico Severo (>1.6 kPa)"></div>
+                </div>
+                <div class="flex justify-between text-[10px] text-biosys-soft mt-1">
+                  <span>0 kPa</span>
+                  <span>0.4 (Bajo)</span>
+                  <span>0.8 (Óptimo)</span>
+                  <span>1.2</span>
+                  <span>1.6 (Severo)</span>
+                </div>
+              </div>
+
+              <!-- Tarjeta de Interpretación Agronómica -->
+              <div id="dpvAdviceBox" class="mt-6 rounded-xl border border-emerald-200 bg-emerald-50/70 p-4 transition-all">
+                <div class="flex items-start gap-3">
+                  <i id="dpvAdviceIcon" data-lucide="check-circle-2" class="h-5 w-5 text-emerald-700 shrink-0 mt-0.5"></i>
+                  <div>
+                    <h4 id="dpvAdviceTitle" class="font-title text-sm font-bold text-emerald-950">
+                      Condición Favorable para Desarrollo Vegetativo
+                    </h4>
+                    <p id="dpvAdviceText" class="mt-1 text-xs leading-5 text-emerald-900">
+                      La planta mantiene sus estomas abiertos con una transpiración fluida sin riesgo de deshidratación. Ideal para asimilación de CO₂ y fotosíntesis balanceada.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recomendaciones de Actuadores (Control de Invernadero) -->
+            <div class="mt-6 pt-4 border-t border-biosys-border/80 flex items-center justify-between text-xs text-biosys-soft">
+              <span class="flex items-center gap-1 font-medium text-biosys-text">
+                <i data-lucide="cpu" class="h-3.5 w-3.5 text-biosys-primary"></i>
+                Acción Sugerida de Control:
+              </span>
+              <span id="dpvActuatorAction" class="font-semibold text-biosys-primary">
+                Mantener régimen actual de ventilación
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Llamado a la investigación / Descarga de datos -->
+    <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 border-t border-biosys-border/60">
+      <div class="mx-auto max-w-7xl">
+        <div class="rounded-2xl border border-biosys-border bg-biosys-surface p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-soft">
+          <div class="max-w-2xl">
+            <span class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Código Abierto y Modelación</span>
+            <h3 class="mt-1 font-title text-xl font-bold text-biosys-text">¿Requieres modelos matemáticos para tu proyecto o tesis?</h3>
+            <p class="mt-2 text-sm leading-6 text-biosys-soft">
+              Desarrollamos algoritmos de control predictivo, modelos numéricos CFD y librerías en Julia y Python para la simulación de microclima y sistemas agropecuarios.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3 shrink-0">
+            <a
+              href="./investigacion.html"
+              class="button-motion focus-ring inline-flex min-h-[44px] items-center rounded-full border border-biosys-border px-5 py-2.5 text-sm font-semibold text-biosys-text hover:border-biosys-primary hover:text-biosys-primary"
+            >
+              Ver líneas de investigación
+            </a>
+            <a
+              href="./contacto.html"
+              class="button-motion cta-link focus-ring inline-flex min-h-[44px] items-center gap-2 rounded-full bg-biosys-primary px-5 py-2.5 text-sm font-semibold text-[var(--biosys-color-surface)]"
+            >
+              Contactar al laboratorio
+              <span class="cta-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="px-4 pb-10 pt-16 sm:px-6 sm:pb-12 lg:px-8 lg:pt-24 border-t border-biosys-border/60">
+    <div class="mx-auto max-w-7xl">
+      <div class="panel overflow-hidden rounded-2xl border border-biosys-border">
+        <div class="grid gap-0 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
+          <div class="flex flex-col justify-between bg-biosys-primary px-6 py-10 text-[var(--biosys-color-surface)] sm:px-8 sm:py-12">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.14em] text-white/70">Herramientas & Modelación</p>
+              <h2 class="balance mt-4 font-title text-3xl font-extrabold tracking-[-0.03em] text-white sm:text-4xl">
+                Ciencia Abierta para Biosistemas
+              </h2>
+              <p class="mt-5 max-w-xl text-base leading-7 text-white/82">
+                El Laboratorio de Modelación y Automatización de Biosistemas pone a disposición de la comunidad académica estas herramientas interactivas para docencia, investigación y divulgación.
+              </p>
+            </div>
+            <div class="mt-8 border-t border-white/20 pt-6 text-xs text-white/70">
+              Universidad Autónoma Chapingo · Departamento de Ingeniería Mecánica Agrícola
+            </div>
+          </div>
+
+          <div class="bg-biosys-surface px-6 py-8 sm:px-8 sm:py-10">
+            <div class="contact-row grid gap-3 py-4 sm:grid-cols-[150px_minmax(0,1fr)]">
+              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Modelación</p>
+              <p class="text-sm leading-7 text-biosys-soft">Balances de materia y energía aplicados a invernaderos, Plant Factories y bioprocesos.</p>
+            </div>
+            <div class="contact-row grid gap-3 py-4 sm:grid-cols-[150px_minmax(0,1fr)]">
+              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Automatización</p>
+              <p class="text-sm leading-7 text-biosys-soft">Estrategias de control climático, fertirriego inteligente y redes de sensores distribuidas.</p>
+            </div>
+            <div class="contact-row grid gap-3 py-4 sm:grid-cols-[150px_minmax(0,1fr)]">
+              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-biosys-primary">Vinculación</p>
+              <p class="text-sm leading-7 text-biosys-soft">Proyectos conjuntos, tesis de licenciatura y posgrado, y estancias científicas.</p>
+            </div>
+            <div class="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+              <a
+                href="./herramientas.html"
+                class="button-motion focus-ring inline-flex min-h-[44px] items-center rounded-full bg-biosys-primary px-5 py-3 text-sm font-semibold text-[var(--biosys-color-surface)]"
+              >
+                Volver arriba
+              </a>
+              <a
+                href="./contacto.html"
+                class="button-motion focus-ring inline-flex min-h-[44px] items-center rounded-full border border-biosys-border px-5 py-3 text-sm font-semibold text-biosys-text"
+              >
+                Ir a Contacto
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT DE CÁLCULO CIENTÍFICO Y CARTA PSICROMÉTRICA -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      // ESTADO GLOBAL
+      let Patm = 77.8; // kPa (Chapingo por defecto)
+      let currentTbs = 24.0;
+      let currentHr = 65.0;
+      let leafMode = "auto"; // "auto" o "manual"
+      let currentTleaf = 22.0;
+
+      // ELEMENTOS DEL DOM - GENERAL / PRESIÓN
+      const inputPatm = document.getElementById("inputPatm");
+      const btnPresetChapingo = document.getElementById("btnPresetChapingo");
+      const btnPresetSeaLevel = document.getElementById("btnPresetSeaLevel");
+
+      // ELEMENTOS DEL DOM - CALCULADORA
+      const sliderTbs = document.getElementById("sliderTbs");
+      const dispTbs = document.getElementById("dispTbs");
+      const sliderHr = document.getElementById("sliderHr");
+      const dispHr = document.getElementById("dispHr");
+
+      const outTbh = document.getElementById("outTbh");
+      const outTpr = document.getElementById("outTpr");
+      const outW = document.getElementById("outW");
+      const outH = document.getElementById("outH");
+      const outEa = document.getElementById("outEa");
+      const outEs = document.getElementById("outEs");
+      const outV = document.getElementById("outV");
+      const outRho = document.getElementById("outRho");
+
+      // ELEMENTOS DEL DOM - DPV
+      const dpvSliderTair = document.getElementById("dpvSliderTair");
+      const dispDpvTair = document.getElementById("dispDpvTair");
+      const dpvSliderHr = document.getElementById("dpvSliderHr");
+      const dispDpvHr = document.getElementById("dispDpvHr");
+      const btnLeafAuto = document.getElementById("btnLeafAuto");
+      const btnLeafManual = document.getElementById("btnLeafManual");
+      const manualLeafWrapper = document.getElementById("manualLeafWrapper");
+      const dpvSliderTleaf = document.getElementById("dpvSliderTleaf");
+      const dispDpvTleaf = document.getElementById("dispDpvTleaf");
+      const leafStatusDesc = document.getElementById("leafStatusDesc");
+
+      const valDpvLeaf = document.getElementById("valDpvLeaf");
+      const valDpvAir = document.getElementById("valDpvAir");
+      const dpvScaleIndicator = document.getElementById("dpvScaleIndicator");
+      const dpvBadge = document.getElementById("dpvBadge");
+      const dpvAdviceBox = document.getElementById("dpvAdviceBox");
+      const dpvAdviceTitle = document.getElementById("dpvAdviceTitle");
+      const dpvAdviceText = document.getElementById("dpvAdviceText");
+      const dpvActuatorAction = document.getElementById("dpvActuatorAction");
+
+      // CARTA PSICROMÉTRICA CANVAS
+      const canvas = document.getElementById("psychroChart");
+      const ctx = canvas.getContext("2d");
+      const tooltip = document.getElementById("chartTooltip");
+      const tipTitle = document.getElementById("tipTitle");
+      const tipDesc = document.getElementById("tipDesc");
+      const btnResetChart = document.getElementById("btnResetChart");
+
+      // FORMULAS TERMODINÁMICAS PSICROMÉTRICAS
+      // Presión de saturación (Tetens / Goff-Gratch aproximado) en kPa
+      function getEs(T) {
+        if (T >= 0) {
+          return 0.61078 * Math.exp((17.27 * T) / (T + 237.3));
+        } else {
+          return 0.61078 * Math.exp((21.875 * T) / (T + 265.5));
+        }
+      }
+
+      // Temperatura de punto de rocío (°C)
+      function getTpr(ea) {
+        if (ea <= 0.001) return -20;
+        const alpha = Math.log(ea / 0.61078);
+        return (237.3 * alpha) / (17.27 - alpha);
+      }
+
+      // Razón de humedad W (kg vapor / kg aire seco)
+      function getW(ea, P) {
+        if (P - ea <= 0.01) return 0.05;
+        return 0.62198 * (ea / (P - ea));
+      }
+
+      // Presión de vapor a partir de W y P
+      function getEaFromW(W, P) {
+        return (W * P) / (0.62198 + W);
+      }
+
+      // Entalpía específica h (kJ/kg)
+      function getEnthalpy(T, W) {
+        return 1.006 * T + W * (2501.0 + 1.86 * T);
+      }
+
+      // Temperatura de bulbo húmedo Tbh (°C) mediante bisección
+      function getTbh(Tbs, ea, P) {
+        const Tpr = getTpr(ea);
+        let low = Tpr;
+        let high = Tbs;
+        const A = 0.000662; // Constante psicrométrica media 1/°C
+
+        for (let i = 0; i < 20; i++) {
+          const mid = (low + high) / 2;
+          const esMid = getEs(mid);
+          const fMid = esMid - P * A * (1 + 0.00115 * mid) * (Tbs - mid) - ea;
+          if (Math.abs(fMid) < 0.0001) {
+            return mid;
+          }
+          if (fMid > 0) {
+            high = mid;
+          } else {
+            low = mid;
+          }
+        }
+        return (low + high) / 2;
+      }
+
+      // Volumen específico (m³/kg)
+      function getSpecVolume(T, W, P) {
+        const Ra = 0.287058; // kJ/(kg K)
+        const Tk = T + 273.15;
+        return (Ra * Tk * (1 + 1.6078 * W)) / P;
+      }
+
+      // Densidad del aire húmedo (kg/m³)
+      function getDensity(W, v) {
+        return (1 + W) / v;
+      }
+
+      // ACTUALIZAR CALCULADORA
+      function updateCalculator() {
+        dispTbs.textContent = currentTbs.toFixed(1);
+        dispHr.textContent = Math.round(currentHr);
+
+        const es = getEs(currentTbs);
+        const ea = es * (currentHr / 100);
+        const tpr = getTpr(ea);
+        const tbh = getTbh(currentTbs, ea, Patm);
+        const W = getW(ea, Patm);
+        const h = getEnthalpy(currentTbs, W);
+        const v = getSpecVolume(currentTbs, W, Patm);
+        const rho = getDensity(W, v);
+
+        outEs.textContent = es.toFixed(2);
+        outEa.textContent = ea.toFixed(2);
+        outTpr.textContent = tpr.toFixed(1);
+        outTbh.textContent = tbh.toFixed(1);
+        outW.textContent = (W * 1000).toFixed(1); // g/kg
+        outH.textContent = h.toFixed(1);
+        outV.textContent = v.toFixed(3);
+        outRho.textContent = rho.toFixed(3);
+
+        // Sincronizar inputs DPV con Tbs y HR
+        syncDpvInputs();
+        // Redibujar Carta Psicrométrica
+        drawPsychroChart();
+      }
+
+      // SINCRONIZAR Y CALCULAR DPV
+      function syncDpvInputs() {
+        dpvSliderTair.value = currentTbs;
+        dispDpvTair.textContent = currentTbs.toFixed(1);
+        dpvSliderHr.value = Math.min(95, Math.max(15, currentHr));
+        dispDpvHr.textContent = Math.round(currentHr);
+
+        if (leafMode === "auto") {
+          currentTleaf = currentTbs - 2.0;
+          dispDpvTleaf.textContent = currentTleaf.toFixed(1);
+          dpvSliderTleaf.value = currentTleaf;
+        }
+
+        updateDpv();
+      }
+
+      function updateDpv() {
+        const Tair = parseFloat(dpvSliderTair.value);
+        const Hr = parseFloat(dpvSliderHr.value);
+        dispDpvTair.textContent = Tair.toFixed(1);
+        dispDpvHr.textContent = Math.round(Hr);
+
+        let Tleaf;
+        if (leafMode === "auto") {
+          Tleaf = Tair - 2.0;
+        } else {
+          Tleaf = parseFloat(dpvSliderTleaf.value);
+        }
+        dispDpvTleaf.textContent = Tleaf.toFixed(1);
+
+        // Cálculos DPV
+        const esAir = getEs(Tair);
+        const eaAir = esAir * (Hr / 100);
+        const esLeaf = getEs(Tleaf);
+
+        const vpdAir = Math.max(0, esAir - eaAir);
+        const vpdLeaf = Math.max(0, esLeaf - eaAir);
+
+        valDpvAir.textContent = vpdAir.toFixed(2);
+        valDpvLeaf.textContent = vpdLeaf.toFixed(2);
+        dpvScaleIndicator.textContent = vpdLeaf.toFixed(2) + " kPa";
+
+        // Clasificación agronómica de DPV de Hoja
+        applyDpvDiagnosis(vpdLeaf);
+      }
+
+      function applyDpvDiagnosis(vpd) {
+        if (vpd < 0.4) {
+          // Muy Bajo / Peligro
+          dpvBadge.className = "rounded-full px-3 py-1 text-xs font-bold bg-blue-100 text-blue-900 border border-blue-300";
+          dpvBadge.textContent = "MUY BAJO (< 0.4 kPa)";
+
+          dpvAdviceBox.className = "mt-6 rounded-xl border border-blue-300 bg-blue-50/80 p-4 transition-all";
+          dpvAdviceIcon.setAttribute("class", "h-5 w-5 text-blue-700 shrink-0 mt-0.5");
+          dpvAdviceTitle.textContent = "Riesgo de Condensación y Enfermedades Criptogámicas";
+          dpvAdviceTitle.className = "font-title text-sm font-bold text-blue-950";
+          dpvAdviceText.textContent = "El aire está prácticamente saturado. La transpiración se detiene, lo que impide la absorción de nutrientes inmóviles como calcio y boro. Elevado riesgo de Botrytis cinerea y Oídio.";
+          dpvAdviceText.className = "mt-1 text-xs leading-5 text-blue-900";
+          dpvActuatorAction.textContent = "Activar ventilación cenital / calefacción para reducir HR";
+        } else if (vpd >= 0.4 && vpd < 0.8) {
+          // Bajo / Favorable para esquejes y plántulas
+          dpvBadge.className = "rounded-full px-3 py-1 text-xs font-bold bg-teal-100 text-teal-900 border border-teal-300";
+          dpvBadge.textContent = "RANGO BAJO (0.4 - 0.8 kPa)";
+
+          dpvAdviceBox.className = "mt-6 rounded-xl border border-teal-300 bg-teal-50/80 p-4 transition-all";
+          dpvAdviceIcon.setAttribute("class", "h-5 w-5 text-teal-700 shrink-0 mt-0.5");
+          dpvAdviceTitle.textContent = "Ideal para Propagación, Enraizamiento y Plántulas";
+          dpvAdviceTitle.className = "font-title text-sm font-bold text-teal-950";
+          dpvAdviceText.textContent = "Baja demanda evaporativa que evita el estrés de plántulas tiernas o esquejes sin raíz formada. En cultivo adulto puede ser ligeramente bajo para máxima fotosíntesis.";
+          dpvAdviceText.className = "mt-1 text-xs leading-5 text-teal-900";
+          dpvActuatorAction.textContent = "Apertura ligera de ventilas si se busca inducir mayor crecimiento";
+        } else if (vpd >= 0.8 && vpd <= 1.2) {
+          // ÓPTIMO
+          dpvBadge.className = "rounded-full px-3 py-1 text-xs font-bold bg-emerald-100 text-emerald-900 border border-emerald-300";
+          dpvBadge.textContent = "RANGO ÓPTIMO (0.8 - 1.2 kPa)";
+
+          dpvAdviceBox.className = "mt-6 rounded-xl border border-emerald-300 bg-emerald-50/80 p-4 transition-all";
+          dpvAdviceIcon.setAttribute("class", "h-5 w-5 text-emerald-700 shrink-0 mt-0.5");
+          dpvAdviceTitle.textContent = "Condición Favorable para Desarrollo Vegetativo y Floración";
+          dpvAdviceTitle.className = "font-title text-sm font-bold text-emerald-950";
+          dpvAdviceText.textContent = "Los estomas permanecen completamente abiertos con una tasa de transpiración balanceada. Asimilación máxima de CO₂, fotosíntesis activa y excelente transporte de nutrientes por el xilema.";
+          dpvAdviceText.className = "mt-1 text-xs leading-5 text-emerald-900";
+          dpvActuatorAction.textContent = "Mantener régimen actual de control climático";
+        } else if (vpd > 1.2 && vpd <= 1.6) {
+          // Moderado Alto
+          dpvBadge.className = "rounded-full px-3 py-1 text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300";
+          dpvBadge.textContent = "RANGO ALTO (1.2 - 1.6 kPa)";
+
+          dpvAdviceBox.className = "mt-6 rounded-xl border border-amber-300 bg-amber-50/80 p-4 transition-all";
+          dpvAdviceIcon.setAttribute("class", "h-5 w-5 text-amber-700 shrink-0 mt-0.5");
+          dpvAdviceTitle.textContent = "Demanda Evaporativa Elevada";
+          dpvAdviceTitle.className = "font-title text-sm font-bold text-amber-950";
+          dpvAdviceText.textContent = "Típico en horas de alta radiación solar. Aceptable si la planta cuenta con suficiente agua en el sustrato, pero exige vigilar que no comience el cierre estomático incipiente.";
+          dpvAdviceText.className = "mt-1 text-xs leading-5 text-amber-900";
+          dpvActuatorAction.textContent = "Monitorear fertirriego / Activar nebulización (fogger) ligera";
+        } else {
+          // Muy Alto / Severo
+          dpvBadge.className = "rounded-full px-3 py-1 text-xs font-bold bg-rose-100 text-rose-900 border border-rose-300";
+          dpvBadge.textContent = "ESTRÉS HÍDRICO SEVERO (> 1.6 kPa)";
+
+          dpvAdviceBox.className = "mt-6 rounded-xl border border-rose-300 bg-rose-50/80 p-4 transition-all";
+          dpvAdviceIcon.setAttribute("class", "h-5 w-5 text-rose-700 shrink-0 mt-0.5");
+          dpvAdviceTitle.textContent = "Estrés Severo y Cierre Estomático Defensivo";
+          dpvAdviceTitle.className = "font-title text-sm font-bold text-rose-950";
+          dpvAdviceText.textContent = "El aire seco extrae agua más rápido de lo que las raíces pueden suministrar. La planta cierra estomas para no deshidratarse, frenando la fotosíntesis. Riesgo de quemadura foliar (tip burn).";
+          dpvAdviceText.className = "mt-1 text-xs leading-5 text-rose-900";
+          dpvActuatorAction.textContent = "Activar nebulización urgente / Extender mallas de sombreo";
+        }
+
+        if (window.lucide) {
+          lucide.createIcons();
+        }
+      }
+
+      // RENDERIZADO DE LA CARTA PSICROMÉTRICA
+      function drawPsychroChart() {
+        const width = canvas.width;
+        const height = canvas.height;
+
+        // Márgenes
+        const margin = { top: 35, right: 75, bottom: 55, left: 65 };
+        const plotW = width - margin.left - margin.right;
+        const plotH = height - margin.top - margin.bottom;
+
+        // Límites físicos de la carta
+        const minT = -5;
+        const maxT = 50;
+        const minW = 0;
+        const maxW = 30; // g/kg
+
+        function xCoord(T) {
+          return margin.left + ((T - minT) / (maxT - minT)) * plotW;
+        }
+        function yCoord(W_g) {
+          return margin.top + plotH - ((W_g - minW) / (maxW - minW)) * plotH;
+        }
+
+        // Limpiar canvas
+        ctx.clearRect(0, 0, width, height);
+
+        // Fondo del gráfico
+        ctx.fillStyle = "#faf9f6";
+        ctx.fillRect(margin.left, margin.top, plotW, plotH);
+
+        // 1. ZONA DE CONFORT VEGETAL (Sombreado verde traslúcido)
+        // Rango de confort típico en invernadero: Tbs 18-28 °C, HR 55-80%
+        ctx.save();
+        ctx.beginPath();
+        const confTmin = 18;
+        const confTmax = 28;
+        const confHrMin = 0.55;
+        const confHrMax = 0.80;
+
+        // Trazar polígono de confort
+        const ptsUpper = [];
+        for (let t = confTmin; t <= confTmax; t += 0.5) {
+          const ea = getEs(t) * confHrMax;
+          const Wg = getW(ea, Patm) * 1000;
+          ptsUpper.push({ x: xCoord(t), y: yCoord(Math.min(maxW, Wg)) });
+        }
+        const ptsLower = [];
+        for (let t = confTmax; t >= confTmin; t -= 0.5) {
+          const ea = getEs(t) * confHrMin;
+          const Wg = getW(ea, Patm) * 1000;
+          ptsLower.push({ x: xCoord(t), y: yCoord(Math.min(maxW, Wg)) });
+        }
+
+        if (ptsUpper.length > 0) {
+          ctx.moveTo(ptsUpper[0].x, ptsUpper[0].y);
+          ptsUpper.forEach(p => ctx.lineTo(p.x, p.y));
+          ptsLower.forEach(p => ctx.lineTo(p.x, p.y));
+          ctx.closePath();
+          ctx.fillStyle = "rgba(46, 125, 89, 0.12)";
+          ctx.fill();
+        }
+        ctx.restore();
+
+        // 2. REJILLA DE BULBO SECO (Líneas verticales cada 5 °C)
+        ctx.lineWidth = 1;
+        for (let t = minT; t <= maxT; t += 5) {
+          const x = xCoord(t);
+          ctx.strokeStyle = t === 0 || t === 25 ? "rgba(46, 94, 78, 0.25)" : "rgba(46, 94, 78, 0.08)";
+          ctx.beginPath();
+          ctx.moveTo(x, margin.top);
+          ctx.lineTo(x, margin.top + plotH);
+          ctx.stroke();
+
+          // Etiquetas Eje X
+          ctx.fillStyle = "#586b64";
+          ctx.font = "11px Inter, sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText(t + "°", x, margin.top + plotH + 18);
+        }
+
+        // 3. REJILLA DE RAZÓN DE HUMEDAD (Líneas horizontales cada 5 g/kg)
+        for (let w = minW; w <= maxW; w += 5) {
+          const y = yCoord(w);
+          ctx.strokeStyle = "rgba(46, 94, 78, 0.08)";
+          ctx.beginPath();
+          ctx.moveTo(margin.left, y);
+          ctx.lineTo(margin.left + plotW, y);
+          ctx.stroke();
+
+          // Etiquetas Eje Y derecha
+          ctx.fillStyle = "#586b64";
+          ctx.font = "11px Inter, sans-serif";
+          ctx.textAlign = "left";
+          ctx.fillText(w + " g/kg", margin.left + plotW + 8, y + 4);
+        }
+
+        // 4. CURVAS DE HUMEDAD RELATIVA (10% a 100%)
+        const hrList = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+        hrList.forEach(hr => {
+          ctx.beginPath();
+          const isSat = hr === 100;
+          ctx.strokeStyle = isSat ? "#1d5287" : "rgba(37, 99, 235, 0.35)";
+          ctx.lineWidth = isSat ? 2.5 : 1.2;
+
+          let started = false;
+          for (let t = minT; t <= maxT; t += 0.5) {
+            const es = getEs(t);
+            const ea = es * (hr / 100);
+            const Wg = getW(ea, Patm) * 1000;
+
+            if (Wg > maxW) {
+              if (started) {
+                // Interpolar punto exacto en el borde superior
+                ctx.lineTo(xCoord(t), yCoord(maxW));
+              }
+              break;
+            }
+
+            const x = xCoord(t);
+            const y = yCoord(Wg);
+
+            if (!started) {
+              ctx.moveTo(x, y);
+              started = true;
+            } else {
+              ctx.lineTo(x, y);
+            }
+          }
+          ctx.stroke();
+
+          // Etiqueta del valor de HR
+          const sampleT = Math.min(maxT - 3, 20 + (100 - hr) * 0.25);
+          const sampleEa = getEs(sampleT) * (hr / 100);
+          const sampleWg = getW(sampleEa, Patm) * 1000;
+          if (sampleWg < maxW - 1) {
+            ctx.fillStyle = isSat ? "#1d5287" : "#2563eb";
+            ctx.font = isSat ? "bold 11px Inter, sans-serif" : "10px Inter, sans-serif";
+            ctx.textAlign = "left";
+            ctx.fillText(hr + "%", xCoord(sampleT) + 2, yCoord(sampleWg) - 4);
+          }
+        });
+
+        // 5. LÍNEAS DE BULBO HÚMEDO (Pendiente descendente característica)
+        ctx.strokeStyle = "rgba(180, 83, 9, 0.25)";
+        ctx.lineWidth = 1;
+        ctx.setLineDash([4, 4]);
+        for (let tbhTarget = 5; tbhTarget <= 35; tbhTarget += 5) {
+          ctx.beginPath();
+          let started = false;
+          for (let tbs = tbhTarget; tbs <= maxT; tbs += 1) {
+            const esTbh = getEs(tbhTarget);
+            const A = 0.000662;
+            const ea = esTbh - Patm * A * (1 + 0.00115 * tbhTarget) * (tbs - tbhTarget);
+            if (ea < 0) break;
+            const Wg = getW(ea, Patm) * 1000;
+            if (Wg < 0 || Wg > maxW) continue;
+
+            const x = xCoord(tbs);
+            const y = yCoord(Wg);
+            if (!started) {
+              ctx.moveTo(x, y);
+              started = true;
+            } else {
+              ctx.lineTo(x, y);
+            }
+          }
+          ctx.stroke();
+        }
+        ctx.setLineDash([]); // Reset dash
+
+        // 6. MARCO DEL ÁREA DE GRÁFICO
+        ctx.strokeStyle = "rgba(46, 94, 78, 0.4)";
+        ctx.lineWidth = 1.5;
+        ctx.strokeRect(margin.left, margin.top, plotW, plotH);
+
+        // TÍTULOS DE EJES
+        ctx.fillStyle = "#20312b";
+        ctx.font = "bold 12px Manrope, Inter, sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText("Temperatura de Bulbo Seco Tbs (°C)", margin.left + plotW / 2, height - 15);
+
+        ctx.save();
+        ctx.translate(margin.left + plotW + 55, margin.top + plotH / 2);
+        ctx.rotate(Math.PI / 2);
+        ctx.fillText("Razón de Humedad W (g vapor / kg aire seco)", 0, 0);
+        ctx.restore();
+
+        // 7. DIBUJAR PUNTO DEL ESTADO ACTUAL
+        const curEs = getEs(currentTbs);
+        const curEa = curEs * (currentHr / 100);
+        const curWg = getW(curEa, Patm) * 1000;
+
+        if (currentTbs >= minT && currentTbs <= maxT && curWg >= minW && curWg <= maxW) {
+          const ptX = xCoord(currentTbs);
+          const ptY = yCoord(curWg);
+
+          // Líneas guía proyectadas a los ejes
+          ctx.strokeStyle = "rgba(46, 94, 78, 0.6)";
+          ctx.lineWidth = 1;
+          ctx.setLineDash([3, 3]);
+
+          // Vertical al eje Tbs
+          ctx.beginPath();
+          ctx.moveTo(ptX, ptY);
+          ctx.lineTo(ptX, margin.top + plotH);
+          ctx.stroke();
+
+          // Horizontal al eje W
+          ctx.beginPath();
+          ctx.moveTo(ptX, ptY);
+          ctx.lineTo(margin.left + plotW, ptY);
+          ctx.stroke();
+          ctx.setLineDash([]);
+
+          // Halo pulsante
+          ctx.beginPath();
+          ctx.arc(ptX, ptY, 12, 0, 2 * Math.PI);
+          ctx.fillStyle = "rgba(46, 94, 78, 0.22)";
+          ctx.fill();
+
+          // Punto central sólido
+          ctx.beginPath();
+          ctx.arc(ptX, ptY, 6, 0, 2 * Math.PI);
+          ctx.fillStyle = "#2e5e4e";
+          ctx.fill();
+          ctx.strokeStyle = "#ffffff";
+          ctx.lineWidth = 2;
+          ctx.stroke();
+
+          // Rótulo del punto
+          ctx.fillStyle = "#1a3028";
+          ctx.font = "bold 12px Manrope, sans-serif";
+          ctx.textAlign = ptX > width - 150 ? "right" : "left";
+          const labelOffset = ptX > width - 150 ? -12 : 12;
+          ctx.fillText(`(${currentTbs.toFixed(1)}°C, ${Math.round(currentHr)}%)`, ptX + labelOffset, ptY - 8);
+        }
+      }
+
+      // INTERACCIÓN CON EL CANVAS (CLIC / MOVIMIENTO DE RATÓN)
+      canvas.addEventListener("mousemove", function (e) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+
+        const mouseX = (e.clientX - rect.left) * scaleX;
+        const mouseY = (e.clientY - rect.top) * scaleY;
+
+        const margin = { top: 35, right: 75, bottom: 55, left: 65 };
+        const plotW = canvas.width - margin.left - margin.right;
+        const plotH = canvas.height - margin.top - margin.bottom;
+
+        if (
+          mouseX >= margin.left &&
+          mouseX <= margin.left + plotW &&
+          mouseY >= margin.top &&
+          mouseY <= margin.top + plotH
+        ) {
+          const hoveredT = -5 + ((mouseX - margin.left) / plotW) * 55;
+          const hoveredW = ((margin.top + plotH - mouseY) / plotH) * 30; // g/kg
+
+          // Calcular HR correspondiente a ese punto
+          const eaHover = getEaFromW(hoveredW / 1000, Patm);
+          const esHover = getEs(hoveredT);
+          const hrHover = Math.min(100, Math.max(0, (eaHover / esHover) * 100));
+
+          tooltip.classList.remove("hidden");
+          tooltip.style.left = (e.clientX - rect.left + 15) + "px";
+          tooltip.style.top = (e.clientY - rect.top - 30) + "px";
+
+          tipTitle.textContent = `${hoveredT.toFixed(1)} °C · ${Math.round(hrHover)}% HR`;
+          tipDesc.textContent = `W: ${hoveredW.toFixed(1)} g/kg · ea: ${eaHover.toFixed(2)} kPa`;
+        } else {
+          tooltip.classList.add("hidden");
+        }
+      });
+
+      canvas.addEventListener("mouseleave", function () {
+        tooltip.classList.add("hidden");
+      });
+
+      canvas.addEventListener("click", function (e) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+
+        const mouseX = (e.clientX - rect.left) * scaleX;
+        const mouseY = (e.clientY - rect.top) * scaleY;
+
+        const margin = { top: 35, right: 75, bottom: 55, left: 65 };
+        const plotW = canvas.width - margin.left - margin.right;
+        const plotH = canvas.height - margin.top - margin.bottom;
+
+        if (
+          mouseX >= margin.left &&
+          mouseX <= margin.left + plotW &&
+          mouseY >= margin.top &&
+          mouseY <= margin.top + plotH
+        ) {
+          const newT = -5 + ((mouseX - margin.left) / plotW) * 55;
+          const newW = ((margin.top + plotH - mouseY) / plotH) * 30; // g/kg
+
+          const eaHover = getEaFromW(newW / 1000, Patm);
+          const esHover = getEs(newT);
+          const newHr = Math.min(100, Math.max(5, (eaHover / esHover) * 100));
+
+          currentTbs = Math.round(newT * 2) / 2; // redondear a 0.5
+          currentHr = Math.round(newHr);
+
+          sliderTbs.value = currentTbs;
+          sliderHr.value = currentHr;
+
+          updateCalculator();
+        }
+      });
+
+      // EVENT LISTENERS DE SLIDERS
+      sliderTbs.addEventListener("input", function (e) {
+        currentTbs = parseFloat(e.target.value);
+        updateCalculator();
+      });
+
+      sliderHr.addEventListener("input", function (e) {
+        currentHr = parseFloat(e.target.value);
+        updateCalculator();
+      });
+
+      // BOTONES DE PRESETS DE LA CALCULADORA
+      document.querySelectorAll(".preset-btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+          currentTbs = parseFloat(this.getAttribute("data-tbs"));
+          currentHr = parseFloat(this.getAttribute("data-hr"));
+          sliderTbs.value = currentTbs;
+          sliderHr.value = currentHr;
+          updateCalculator();
+        });
+      });
+
+      // RESETEAR CARTA
+      btnResetChart.addEventListener("click", function () {
+        currentTbs = 24.0;
+        currentHr = 65.0;
+        sliderTbs.value = currentTbs;
+        sliderHr.value = currentHr;
+        updateCalculator();
+      });
+
+      // GESTIÓN DE PRESIÓN ATMOSFÉRICA
+      inputPatm.addEventListener("change", function (e) {
+        const val = parseFloat(e.target.value);
+        if (!isNaN(val) && val >= 40 && val <= 115) {
+          Patm = val;
+          btnPresetChapingo.className = "rounded-full border border-biosys-border bg-biosys-surface px-4 py-1.5 text-xs font-semibold text-biosys-text hover:border-biosys-primary hover:text-biosys-primary transition-all";
+          btnPresetSeaLevel.className = "rounded-full border border-biosys-border bg-biosys-surface px-4 py-1.5 text-xs font-semibold text-biosys-text hover:border-biosys-primary hover:text-biosys-primary transition-all";
+          updateCalculator();
+        }
+      });
+
+      btnPresetChapingo.addEventListener("click", function () {
+        Patm = 77.8;
+        inputPatm.value = "77.8";
+        btnPresetChapingo.className = "rounded-full border border-biosys-primary bg-biosys-primary px-4 py-1.5 text-xs font-semibold text-white transition-all shadow-xs";
+        btnPresetSeaLevel.className = "rounded-full border border-biosys-border bg-biosys-surface px-4 py-1.5 text-xs font-semibold text-biosys-text hover:border-biosys-primary hover:text-biosys-primary transition-all";
+        updateCalculator();
+      });
+
+      btnPresetSeaLevel.addEventListener("click", function () {
+        Patm = 101.325;
+        inputPatm.value = "101.3";
+        btnPresetSeaLevel.className = "rounded-full border border-biosys-primary bg-biosys-primary px-4 py-1.5 text-xs font-semibold text-white transition-all shadow-xs";
+        btnPresetChapingo.className = "rounded-full border border-biosys-border bg-biosys-surface px-4 py-1.5 text-xs font-semibold text-biosys-text hover:border-biosys-primary hover:text-biosys-primary transition-all";
+        updateCalculator();
+      });
+
+      // CONTROLES DPV
+      dpvSliderTair.addEventListener("input", function (e) {
+        currentTbs = parseFloat(e.target.value);
+        sliderTbs.value = currentTbs;
+        dispTbs.textContent = currentTbs.toFixed(1);
+        dispDpvTair.textContent = currentTbs.toFixed(1);
+        updateDpv();
+        drawPsychroChart();
+      });
+
+      dpvSliderHr.addEventListener("input", function (e) {
+        currentHr = parseFloat(e.target.value);
+        sliderHr.value = currentHr;
+        dispHr.textContent = Math.round(currentHr);
+        dispDpvHr.textContent = Math.round(currentHr);
+        updateDpv();
+        drawPsychroChart();
+      });
+
+      dpvSliderTleaf.addEventListener("input", function (e) {
+        currentTleaf = parseFloat(e.target.value);
+        dispDpvTleaf.textContent = currentTleaf.toFixed(1);
+        updateDpv();
+      });
+
+      btnLeafAuto.addEventListener("click", function () {
+        leafMode = "auto";
+        btnLeafAuto.className = "rounded-lg bg-biosys-primary px-2.5 py-1 text-white font-medium text-[11px]";
+        btnLeafManual.className = "rounded-lg border border-biosys-border bg-biosys-surface px-2.5 py-1 text-biosys-text font-medium text-[11px] hover:border-biosys-primary";
+        manualLeafWrapper.classList.add("hidden");
+        leafStatusDesc.textContent = "* La hoja transpira activamente, por lo que su temperatura suele estar entre 1°C y 3°C por debajo de la del aire en condiciones normales.";
+        syncDpvInputs();
+      });
+
+      btnLeafManual.addEventListener("click", function () {
+        leafMode = "manual";
+        btnLeafManual.className = "rounded-lg bg-biosys-primary px-2.5 py-1 text-white font-medium text-[11px]";
+        btnLeafAuto.className = "rounded-lg border border-biosys-border bg-biosys-surface px-2.5 py-1 text-biosys-text font-medium text-[11px] hover:border-biosys-primary";
+        manualLeafWrapper.classList.remove("hidden");
+        leafStatusDesc.textContent = "* Modifica la temperatura foliar medida directamente con sensor de infrarrojos o cámara termográfica.";
+        updateDpv();
+      });
+
+      // INICIALIZACIÓN
+      updateCalculator();
+    });
+  </script>
+</body>
+</html>
